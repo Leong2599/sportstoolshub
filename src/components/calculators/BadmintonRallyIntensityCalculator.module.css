@@ -1,0 +1,75 @@
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  text-align: center;
+}
+
+.metricLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.metricValue {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.metricSublabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.breakdownGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.breakdownItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  text-align: center;
+}
+
+.breakdownLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.breakdownValue {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.list {
+  margin: 0 0 var(--sth-space-4);
+  padding-left: var(--sth-space-5);
+  color: var(--sth-color-text-muted);
+  line-height: var(--sth-line-height-relaxed);
+}
+
+.list li {
+  margin-bottom: var(--sth-space-2);
+}

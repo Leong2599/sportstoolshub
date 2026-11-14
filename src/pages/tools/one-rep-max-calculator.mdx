@@ -1,0 +1,41 @@
+---
+title: One Rep Max Calculator
+description: Calculate your one-rep max (1RM) for strength training using various formulas.
+hide_table_of_contents: true
+---
+
+import {OneRepMaxCalculator} from '@site/src/components/calculators/OneRepMaxCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="One Rep Max Calculator"
+  subtitle="Estimate your maximum lifting potential for a single repetition across various exercises."
+>
+  <OneRepMaxCalculator />
+
+  <ToolInfo>
+
+## Understanding Your One Rep Max (1RM)
+
+Your One Rep Max (1RM) is the maximum amount of weight you can lift for a single repetition of a given exercise. It's a key metric for gauging strength and designing effective training programs, whether you're focusing on strength, hypertrophy, or endurance.
+
+### How to Use This Calculator
+
+- **Enter Weight Lifted:** Input the weight you successfully lifted for your chosen exercise.
+- **Enter Repetitions:** Input the number of clean repetitions you completed with that weight. For accuracy, it's best to use a weight you can lift for 2-10 reps.
+- **Choose Formula:** Select one of the various formulas available. The Epley formula is widely popular and generally considered reliable.
+
+### Why Calculate Your 1RM?
+
+Knowing your 1RM allows you to:
+
+- **Gauge Strength:** Track your progress and measure improvements in strength over time.
+- **Program Training:** Design precise training percentages for strength (80-95% 1RM), hypertrophy (60-80% 1RM), and endurance (40-60% 1RM).
+- **Assess Safety:** Avoid attempting true 1RM lifts in training, which carry a higher risk of injury, by estimating it safely.
+
+### Limitations of 1RM Calculation
+
+While useful, 1RM calculators provide estimations. Factors like fatigue, specific exercise mechanics, and individual physiology can influence actual 1RM. Always prioritize proper form and listen to your body when training.
+
+</ToolInfo>
+</ToolPage>

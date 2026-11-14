@@ -1,0 +1,26 @@
+---
+title: Lean Body Mass Calculator
+description: Estimate your Lean Body Mass (LBM) and body fat percentage using the Boer formula.
+hide_table_of_contents: true
+---
+
+import {LeanBodyMassCalculator} from '@site/src/components/calculators/LeanBodyMassCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Lean Body Mass Calculator"
+  subtitle="Estimate your body composition by calculating your lean body mass and body fat percentage."
+>
+  <LeanBodyMassCalculator />
+
+  <ToolInfo>
+
+## About Lean Body Mass (LBM)
+
+Lean Body Mass represents the weight of your body minus your body fat. It includes the weight of your organs, skin, bones, and muscle mass. This calculator uses the Boer formula, which is one of several popular methods to estimate LBM.
+
+- **Men:** LBM = (0.407 * weight in kg) + (0.267 * height in cm) - 19.2
+- **Women:** LBM = (0.252 * weight in kg) + (0.473 * height in cm) - 48.3
+
+</ToolInfo>
+</ToolPage>

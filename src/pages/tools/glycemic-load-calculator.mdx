@@ -1,0 +1,53 @@
+---
+title: Glycemic Load Calculator
+description: Calculate glycemic load of meals and analyze carbohydrate quality for optimal blood sugar management and athletic performance
+hide_table_of_contents: true
+---
+
+import {GlycemicLoadCalculator} from '@site/src/components/calculators/GlycemicLoadCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Glycemic Load Calculator"
+  subtitle="Analyze carbohydrate quality and calculate glycemic load for optimal blood sugar management"
+>
+  <GlycemicLoadCalculator />
+
+  <ToolInfo>
+
+## Understanding Glycemic Load
+
+Glycemic Load (GL) measures how much a food item raises blood glucose levels after consumption. It considers both the glycemic index and the serving size.
+
+### GL Categories
+
+- Low GL (1-10): Minimal blood sugar impact
+- Medium GL (11-19): Moderate impact
+- High GL (20+): Significant blood sugar impact
+
+### For Athletes
+
+Lower GL meals support sustained energy, while higher GL options can be beneficial around training sessions for quick energy replenishment.
+
+### Common Foods Reference
+
+#### Low Glycemic Index Foods (55 or below)
+
+- Most vegetables, legumes, and fruits
+- Whole grains like oats and quinoa
+- Nuts, seeds, and dairy products
+
+#### Medium Glycemic Index Foods (56-69)
+
+- Brown rice, sweet potatoes
+- Many tropical fruits
+- Whole grain breads
+
+#### High Glycemic Index Foods (70 and above)
+
+- White potatoes, white rice
+- White bread, sugary foods
+- Watermelon, pineapple
+
+</ToolInfo>
+</ToolPage>

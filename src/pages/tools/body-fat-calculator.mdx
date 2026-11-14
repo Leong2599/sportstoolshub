@@ -1,0 +1,60 @@
+---
+title: Body Fat Calculator
+description: Calculate your body fat percentage with our free body fat calculator. Uses multiple methods including US Navy, BMI, and skinfold measurements for accurate results.
+hide_table_of_contents: true
+---
+
+import {BodyFatCalculator} from '@site/src/components/calculators/BodyFatCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Body Fat Calculator"
+  subtitle="Calculate your body fat percentage using multiple scientifically validated methods for accurate body composition analysis"
+>
+  <BodyFatCalculator />
+
+  <ToolInfo>
+
+## About Body Fat Calculation
+
+Body fat percentage is a key health metric that provides insight into your body composition beyond just weight.
+
+### Calculation Methods
+
+- **US Navy Method:** Uses circumference measurements for good accuracy
+- **BMI-Based Method:** Simple estimation using BMI, less accurate
+- **Skinfold Method:** Uses caliper measurements, most accurate when done properly
+
+### Measurement Tips
+
+- Take measurements in the morning before eating
+- Use a flexible measuring tape for circumference measurements
+- Measure at the same locations consistently
+- For skinfold measurements, use proper calipers
+- Take multiple measurements and use the average
+
+### Healthy Body Fat Ranges
+
+#### Men
+
+- Athletes: 6-13%
+- Fitness: 14-17%
+- Acceptable: 18-24%
+- Obese: 25%+
+
+#### Women
+
+- Athletes: 14-20%
+- Fitness: 21-24%
+- Acceptable: 25-31%
+- Obese: 32%+
+
+### Limitations
+
+- These are estimates, not clinical measurements
+- Hydration levels can affect measurements
+- Individual variations in body composition
+- Consult professionals for medical assessments
+
+</ToolInfo>
+</ToolPage>

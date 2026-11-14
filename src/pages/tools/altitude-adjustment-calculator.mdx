@@ -1,0 +1,56 @@
+---
+title: Altitude Adjustment Calculator
+description: Calculate pace adjustments, performance impact, and acclimatization guidance for training and racing at altitude
+hide_table_of_contents: true
+---
+
+import {AltitudeAdjustmentCalculator} from '@site/src/components/calculators/AltitudeAdjustmentCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Altitude Adjustment Calculator"
+  subtitle="Calculate pace adjustments, performance impact, and acclimatization guidance for training and racing at altitude"
+>
+  <AltitudeAdjustmentCalculator />
+
+  <ToolInfo>
+
+## Understanding Altitude Effects
+
+Altitude reduces the oxygen available to your working muscles, so the same effort produces a slower pace. The effect depends on how high you go, where you came from, and how long you have had to adapt.
+
+### Altitude Performance Zones
+
+- **0-500m:** Sea level - no adjustment needed
+- **500-1500m:** Low altitude - 2-4% slower
+- **1500-2500m:** Moderate altitude - 5-8% slower
+- **2500-3500m:** High altitude - 8-12% slower
+- **3500-5000m:** Very high - 12-20% slower
+- **Over 5000m:** Extreme - 20%+ slower
+
+### Acclimatization Timeline
+
+- **Day 1-3:** Initial adaptation (60% benefit)
+- **Day 4-7:** Significant improvement (80%)
+- **Day 8-14:** Near full adaptation (95%)
+- **Day 14-21:** Complete acclimatization
+- **Benefits last:** 2-3 weeks after return
+
+### Performance Impact
+
+- VO2 max decreases ~3% per 300m above 1500m
+- Maximum power output decreases with altitude
+- Recovery time increases significantly
+- Hydration needs increase at altitude
+- Sleep quality often suffers initially
+
+### Training Strategies
+
+- Use heart rate rather than pace
+- Start sessions with a conservative warm-up
+- Prioritize recovery between days at altitude
+- Lower intensity, longer durations
+- Avoid hard efforts in the first 48 hours
+
+</ToolInfo>
+</ToolPage>

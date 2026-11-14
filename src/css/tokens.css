@@ -1,0 +1,75 @@
+:root {
+  --sth-color-primary: #3b82f6;
+  --sth-color-primary-dark: #2563eb;
+  --sth-color-primary-darker: #1d4ed8;
+  --sth-color-primary-darkest: #1e40af;
+  --sth-color-primary-light: #60a5fa;
+  --sth-color-primary-lighter: #93c5fd;
+  --sth-color-primary-lightest: #bfdbfe;
+  --sth-color-accent: #10b981;
+  --sth-color-text: #1f2937;
+  --sth-color-text-muted: #4b5563;
+  --sth-color-text-subtle: #6b7280;
+  --sth-color-bg: #f4f7f6;
+  --sth-color-surface: #ffffff;
+  --sth-color-border: #e5e7eb;
+
+  --sth-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --sth-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  --sth-font-size-xs: 0.75rem;
+  --sth-font-size-sm: 0.875rem;
+  --sth-font-size-md: 1rem;
+  --sth-font-size-lg: 1.125rem;
+  --sth-font-size-xl: 1.25rem;
+  --sth-font-size-2xl: 1.5rem;
+  --sth-font-size-3xl: 2rem;
+  --sth-font-size-4xl: 2.8rem;
+  --sth-font-size-5xl: 3.8rem;
+  --sth-line-height-tight: 1.2;
+  --sth-line-height-normal: 1.6;
+  --sth-line-height-relaxed: 1.8;
+
+  --sth-space-1: 0.25rem;
+  --sth-space-2: 0.5rem;
+  --sth-space-3: 0.75rem;
+  --sth-space-4: 1rem;
+  --sth-space-5: 1.25rem;
+  --sth-space-6: 1.5rem;
+  --sth-space-8: 2rem;
+  --sth-space-10: 2.5rem;
+  --sth-space-12: 3rem;
+  --sth-space-16: 4rem;
+  --sth-space-20: 5rem;
+  --sth-space-24: 6rem;
+  --sth-container: 1200px;
+
+  --sth-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --sth-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --sth-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --sth-radius-sm: 0.5rem;
+  --sth-radius-md: 0.75rem;
+  --sth-radius-lg: 1rem;
+  --sth-transition-fast: 0.2s ease-in-out;
+  --sth-transition-base: 0.3s ease-in-out;
+  --sth-focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.3);
+
+  --sth-card-bg: var(--sth-color-surface);
+  --sth-card-border: var(--sth-color-border);
+  --sth-card-radius: var(--sth-radius-md);
+  --sth-card-padding: var(--sth-space-6);
+  --sth-card-shadow: var(--sth-shadow-md);
+  --sth-card-shadow-hover: var(--sth-shadow-lg);
+
+  --sth-form-bg: var(--sth-color-surface);
+  --sth-form-border: var(--sth-color-border);
+  --sth-form-radius: var(--sth-radius-sm);
+  --sth-form-padding: 0.875rem var(--sth-space-4);
+  --sth-form-color: var(--sth-color-text);
+  --sth-form-placeholder: var(--sth-color-text-subtle);
+  --sth-form-focus-border: var(--sth-color-primary);
+  --sth-form-focus-shadow: var(--sth-focus-ring);
+
+  --sth-result-value-color: var(--sth-color-primary);
+  --sth-result-value-size: 4rem;
+  --sth-result-category-color: var(--sth-color-accent);
+}

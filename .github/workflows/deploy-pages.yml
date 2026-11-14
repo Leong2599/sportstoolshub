@@ -1,0 +1,141 @@
+name: Deploy to GitHub Pages
+
+# One Pages site per repository, so this workflow owns both lanes:
+#
+# - preview   - a manual run builds at the GitHub Pages project path
+#               (`https://<owner>.github.io/<repo>/`) instead of the custom
+#               domain. This is the review target before the DNS cutover.
+# - production - builds at the custom domain (`https://sportstoolshub.com`) and
+#               is gated on the repository variable `PAGES_DEPLOY_ENABLED`.
+#
+# The gate keeps `main` from going live before ST-28 performs the cutover:
+# until the variable is set, a push to `main` skips the job, and a manual run
+# can only produce a preview.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Build lane'
+        type: choice
+        required: true
+        default: preview
+        options:
+          - preview
+          - production
+      confirmation:
+        description: 'For production, type "deploy" to confirm'
+        type: string
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Pages artifact
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # A push to main deploys only once the cutover variable is set (ST-28).
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      vars.PAGES_DEPLOY_ENABLED == 'true'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refuse an unconfirmed production deploy
+        if: inputs.mode == 'production' && inputs.confirmation != 'deploy'
+        run: |
+          echo "::error::Production runs need confirmation=deploy."
+          exit 1
+
+      - name: Refuse a production deploy before the cutover
+        if: inputs.mode == 'production' && vars.PAGES_DEPLOY_ENABLED != 'true'
+        run: |
+          echo "::error::Set the PAGES_DEPLOY_ENABLED repository variable first (ST-28 cutover)."
+          exit 1
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        env:
+          LEGACY_ALIASES_STRICT: '1'
+          # The dispatch input drives the lane; a push to main is production.
+          LANE: ${{ inputs.mode || 'production' }}
+        run: |
+          set -euo pipefail
+          repo="${{ github.event.repository.name }}"
+          if [ "$LANE" = "preview" ]; then
+            base="/${repo}/"
+            url="https://${{ github.repository_owner }}.github.io"
+          else
+            base="/"
+            url="https://sportstoolshub.com"
+          fi
+          echo "Building lane=$LANE baseUrl=$base url=$url"
+          BASE_URL="$base" SITE_URL="$url" npm run build
+          if [ "$LANE" = "preview" ]; then
+            # A CNAME in a preview artifact would point the custom domain at
+            # this preview build before the cutover.
+            rm -f build/CNAME
+          fi
+          test -f build/.nojekyll
+
+      # Cutover gate: even a preview build must preserve every legacy URL,
+      # canonical route, feed, tag page and sitemap entry. `legacy-urls.json`
+      # makes a host switch cheap after the DNS cutover (ST-28).
+      - name: Parity check
+        env:
+          LANE: ${{ inputs.mode || 'production' }}
+        run: |
+          set -euo pipefail
+          repo="${{ github.event.repository.name }}"
+          if [ "$LANE" = "preview" ]; then
+            origin="https://${{ github.repository_owner }}.github.io"
+            base="/${repo}/"
+          else
+            origin="https://sportstoolshub.com"
+            base="/"
+          fi
+          node scripts/parity-check.mjs --dir=build --origin="$origin" --base-path="$base" --skip-content --preview
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,41 @@
+.macroGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sth-space-4);
+  margin-top: var(--sth-space-4);
+}
+
+.macroItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  text-align: center;
+}
+
+.macroLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.macroGrams {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.macroCalories {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.small {
+  margin: 0 0 var(--sth-space-3);
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  line-height: var(--sth-line-height-relaxed);
+}

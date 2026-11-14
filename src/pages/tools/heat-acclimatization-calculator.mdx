@@ -1,0 +1,55 @@
+---
+title: Heat Acclimatization Calculator
+description: Calculate heat stress, pace adjustments, and hydration needs for training and racing in hot conditions
+hide_table_of_contents: true
+---
+
+import {HeatAcclimatizationCalculator} from '@site/src/components/calculators/HeatAcclimatizationCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Heat Acclimatization Calculator"
+  subtitle="Calculate heat stress, pace adjustments, and hydration needs for training and racing in hot conditions"
+>
+  <HeatAcclimatizationCalculator />
+
+  <ToolInfo>
+
+## Understanding Heat Acclimatization
+
+Heat acclimatization is the process that lets your body cope with heat. Until you have it, hot weather costs you pace and raises your health risk.
+
+### Heat Stress Levels
+
+- **Under 18C:** No heat adjustment needed
+- **18-22C:** 2-5% slower pace
+- **22-26C:** 5-10% slower pace
+- **26-30C:** 10-15% slower pace
+- **Over 30C:** 15-20%+ slower pace
+
+### Hydration Guidelines
+
+- **Mild (under 20C):** 500-750ml/hour
+- **Moderate (20-25C):** 750-1000ml/hour
+- **Hot (25-30C):** 1000-1500ml/hour
+- **Very Hot (over 30C):** 1500ml+/hour
+- Add 200-300ml per 10C above 20C
+
+### Acclimatization Timeline
+
+- **Day 1-3:** Initial adaptation (60% benefit)
+- **Day 4-7:** Significant improvement (80%)
+- **Day 8-14:** Near full adaptation (95%)
+- **Day 14+:** Complete acclimatization
+- Benefits last 2-3 weeks without heat exposure
+
+### Risk Factors
+
+- High humidity (over 70%) reduces cooling
+- No wind increases heat stress
+- Direct sun adds 5-8C effective temperature
+- Previous heat illness increases risk
+- Medications can affect heat regulation
+
+</ToolInfo>
+</ToolPage>

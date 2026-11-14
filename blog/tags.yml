@@ -1,0 +1,1150 @@
+basketball:
+  label: "Basketball"
+  description: "Basketball guides, training, and technique articles."
+
+boxing:
+  label: "Boxing"
+  description: "Boxing guides, training, and technique articles."
+
+cricket:
+  label: "Cricket"
+  description: "Cricket guides, training, and technique articles."
+
+cycling:
+  label: "Cycling"
+  description: "Cycling guides, training, and technique articles."
+
+golf:
+  label: "Golf"
+  description: "Golf guides, training, and technique articles."
+
+hockey:
+  label: "Hockey"
+  description: "Hockey guides, training, and technique articles."
+
+karate:
+  label: "Karate"
+  description: "Karate guides, training, and technique articles."
+
+pickleball:
+  label: "Pickleball"
+  description: "Pickleball guides, training, and technique articles."
+
+soccer:
+  label: "Soccer"
+  description: "Soccer guides, training, and technique articles."
+
+squash:
+  label: "Squash"
+  description: "Squash guides, training, and technique articles."
+
+swimming:
+  label: "Swimming"
+  description: "Swimming guides, training, and technique articles."
+
+table-tennis:
+  label: "Table Tennis"
+  description: "Table Tennis guides, training, and technique articles."
+
+tennis:
+  label: "Tennis"
+  description: "Tennis guides, training, and technique articles."
+
+wrestling:
+  label: "Wrestling"
+  description: "Wrestling guides, training, and technique articles."
+
+adult-swimming:
+  label: "adult swimming"
+
+advanced:
+  label: "advanced"
+
+age-group-swimming:
+  label: "age group swimming"
+
+backhand:
+  label: "backhand"
+
+bags:
+  label: "bags"
+
+ball-control:
+  label: "ball control"
+
+ball-handling:
+  label: "ball handling"
+
+basketball-drills:
+  label: "basketball drills"
+
+basketball-roles:
+  label: "basketball roles"
+
+batting:
+  label: "batting"
+
+beginner:
+  label: "beginner"
+
+beginner-golf:
+  label: "beginner golf"
+
+beginners:
+  label: "beginners"
+
+belt-system:
+  label: "belt system"
+
+bicycle-evolution:
+  label: "bicycle evolution"
+
+bike-fit:
+  label: "bike fit"
+
+bike-gear:
+  label: "bike gear"
+
+bike-handling:
+  label: "bike handling"
+
+bike-maintenance:
+  label: "bike maintenance"
+
+black-belt:
+  label: "black belt"
+
+blocks:
+  label: "blocks"
+
+boards:
+  label: "boards"
+
+body-contact:
+  label: "body contact"
+
+boxing-legends:
+  label: "boxing legends"
+
+breathing:
+  label: "breathing"
+
+bunkai:
+  label: "bunkai"
+
+butterfly:
+  label: "butterfly"
+
+buying-guide:
+  label: "buying guide"
+
+captaincy:
+  label: "captaincy"
+
+catching:
+  label: "catching"
+
+center:
+  label: "center"
+
+champions:
+  label: "champions"
+
+championship:
+  label: "championship"
+
+checking:
+  label: "checking"
+
+chopping:
+  label: "chopping"
+
+coaching:
+  label: "coaching"
+
+combinations:
+  label: "combinations"
+
+combos:
+  label: "combos"
+
+communication:
+  label: "communication"
+
+competition:
+  label: "competition"
+
+competitive-swimming:
+  label: "competitive swimming"
+
+competitive-tennis:
+  label: "competitive tennis"
+
+conditioning:
+  label: "conditioning"
+
+confidence:
+  label: "confidence"
+
+cool-down:
+  label: "cool-down"
+
+course-management:
+  label: "course management"
+
+court-positioning:
+  label: "court positioning"
+
+cricket-bat:
+  label: "cricket bat"
+
+cricket-batting:
+  label: "cricket batting"
+
+cricket-bowling:
+  label: "cricket bowling"
+
+cricket-drills:
+  label: "cricket drills"
+
+cricket-equipment:
+  label: "cricket equipment"
+
+cricket-fielding:
+  label: "cricket fielding"
+
+cricket-fitness:
+  label: "cricket fitness"
+
+cricket-nutrition:
+  label: "cricket nutrition"
+
+cricket-strategy:
+  label: "cricket strategy"
+
+crossovers:
+  label: "crossovers"
+
+culture:
+  label: "culture"
+
+cycling-apparel:
+  label: "cycling apparel"
+
+cycling-coaching:
+  label: "cycling coaching"
+
+cycling-conditioning:
+  label: "cycling conditioning"
+
+cycling-culture:
+  label: "cycling culture"
+
+cycling-equipment:
+  label: "cycling equipment"
+
+cycling-fitness:
+  label: "cycling fitness"
+
+cycling-history:
+  label: "cycling history"
+
+cycling-hydration:
+  label: "cycling hydration"
+
+cycling-mindset:
+  label: "cycling mindset"
+
+cycling-nutrition:
+  label: "cycling nutrition"
+
+cycling-positions:
+  label: "cycling positions"
+
+cycling-recovery:
+  label: "cycling recovery"
+
+cycling-roles:
+  label: "cycling roles"
+
+cycling-safety:
+  label: "cycling safety"
+
+cycling-skills:
+  label: "cycling skills"
+
+cycling-stamina:
+  label: "cycling stamina"
+
+cycling-strategy:
+  label: "cycling strategy"
+
+cycling-techniques:
+  label: "cycling techniques"
+
+cycling-training:
+  label: "cycling training"
+
+defense:
+  label: "defense"
+
+defensive-shots:
+  label: "defensive shots"
+
+dekes:
+  label: "dekes"
+
+development:
+  label: "development"
+
+diet:
+  label: "diet"
+
+dinking:
+  label: "dinking"
+
+discipline:
+  label: "discipline"
+
+dojo:
+  label: "dojo"
+
+doubles:
+  label: "doubles"
+
+dribbling:
+  label: "dribbling"
+
+drills:
+  label: "drills"
+
+endurance-training:
+  label: "endurance training"
+
+equipment:
+  label: "equipment"
+
+escapes:
+  label: "escapes"
+
+exercises:
+  label: "exercises"
+
+fast-bowling:
+  label: "fast bowling"
+
+faults:
+  label: "faults"
+
+finishing:
+  label: "finishing"
+
+first-class:
+  label: "first class"
+
+fitness:
+  label: "fitness"
+
+flexibility:
+  label: "flexibility"
+
+focus:
+  label: "focus"
+
+footwork:
+  label: "footwork"
+
+formations:
+  label: "formations"
+
+forms:
+  label: "forms"
+
+freestyle-technique:
+  label: "freestyle technique"
+
+front-crawl:
+  label: "front crawl"
+
+game-plan:
+  label: "game plan"
+
+gear:
+  label: "gear"
+
+getting-started:
+  label: "getting started"
+
+gi:
+  label: "gi"
+
+gloves:
+  label: "gloves"
+
+goal-scoring:
+  label: "goal scoring"
+
+goalie:
+  label: "goalie"
+
+goaltending:
+  label: "goaltending"
+
+goju-ryu:
+  label: "goju ryu"
+
+golf-basics:
+  label: "golf basics"
+
+golf-careers:
+  label: "golf careers"
+
+golf-chipping:
+  label: "golf chipping"
+
+golf-coaching:
+  label: "golf coaching"
+
+golf-competition:
+  label: "golf competition"
+
+golf-conditioning:
+  label: "golf conditioning"
+
+golf-confidence:
+  label: "golf confidence"
+
+golf-endurance:
+  label: "golf endurance"
+
+golf-etiquette:
+  label: "golf etiquette"
+
+golf-evolution:
+  label: "golf evolution"
+
+golf-fitness:
+  label: "golf fitness"
+
+golf-fueling:
+  label: "golf fueling"
+
+golf-fundamentals:
+  label: "golf fundamentals"
+
+golf-handicaps:
+  label: "golf handicaps"
+
+golf-health:
+  label: "golf health"
+
+golf-history:
+  label: "golf history"
+
+golf-industry:
+  label: "golf industry"
+
+golf-injury-prevention:
+  label: "golf injury prevention"
+
+golf-longevity:
+  label: "golf longevity"
+
+golf-maintenance:
+  label: "golf maintenance"
+
+golf-mental-toughness:
+  label: "golf mental toughness"
+
+golf-nutrition:
+  label: "golf nutrition"
+
+golf-performance:
+  label: "golf performance"
+
+golf-positions:
+  label: "golf positions"
+
+golf-psychology:
+  label: "golf psychology"
+
+golf-putting:
+  label: "golf putting"
+
+golf-recovery:
+  label: "golf recovery"
+
+golf-rules:
+  label: "golf rules"
+
+golf-safety:
+  label: "golf safety"
+
+golf-scoring:
+  label: "golf scoring"
+
+golf-short-game:
+  label: "golf short game"
+
+golf-stamina:
+  label: "golf stamina"
+
+golf-strategy:
+  label: "golf strategy"
+
+golf-strength:
+  label: "golf strength"
+
+golf-swing-mechanics:
+  label: "golf swing mechanics"
+
+golf-tactics:
+  label: "golf tactics"
+
+golf-technique:
+  label: "golf technique"
+
+grip:
+  label: "grip"
+
+health:
+  label: "health"
+
+history:
+  label: "history"
+
+hydration:
+  label: "hydration"
+
+improvement:
+  label: "improvement"
+
+injury:
+  label: "injury"
+
+injury-prevention:
+  label: "injury prevention"
+
+jab:
+  label: "jab"
+
+judging:
+  label: "judging"
+
+junior-development:
+  label: "junior development"
+
+junior-golf:
+  label: "junior golf"
+
+junior-tennis:
+  label: "junior tennis"
+
+karate-kicks:
+  label: "karate kicks"
+
+karate-stances:
+  label: "karate stances"
+
+karate-styles:
+  label: "karate styles"
+
+kata:
+  label: "kata"
+
+kiai:
+  label: "kiai"
+
+kumite:
+  label: "kumite"
+
+leadership:
+  label: "leadership"
+
+leg-spin:
+  label: "leg spin"
+
+leg-techniques:
+  label: "leg techniques"
+
+lobs:
+  label: "lobs"
+
+long-distance-cycling:
+  label: "long distance cycling"
+
+martial-arts-basics:
+  label: "martial arts basics"
+
+martial-arts-training:
+  label: "martial arts training"
+
+masters-swimming:
+  label: "masters swimming"
+
+match-analysis:
+  label: "match analysis"
+
+mental:
+  label: "mental"
+
+mental-game:
+  label: "mental game"
+
+mental-preparation:
+  label: "mental preparation"
+
+mental-toughness:
+  label: "mental toughness"
+
+mental-training:
+  label: "mental training"
+
+mistakes:
+  label: "mistakes"
+
+movement:
+  label: "movement"
+
+nutrition:
+  label: "nutrition"
+
+off-spin:
+  label: "off spin"
+
+off-ball-movement:
+  label: "off-ball movement"
+
+offense:
+  label: "offense"
+
+okinawa:
+  label: "okinawa"
+
+olympic-swimming:
+  label: "Olympic swimming"
+
+olympics:
+  label: "olympics"
+
+open-water-swimming:
+  label: "open water swimming"
+
+origins:
+  label: "origins"
+
+orthodox:
+  label: "orthodox"
+
+outdoor-swimming:
+  label: "outdoor swimming"
+
+paddle:
+  label: "paddle"
+
+passing:
+  label: "passing"
+
+penalty-kill:
+  label: "penalty kill"
+
+performance:
+  label: "performance"
+
+performance-optimization:
+  label: "performance optimization"
+
+ping-pong:
+  label: "ping pong"
+
+pins:
+  label: "pins"
+
+player-development:
+  label: "player development"
+
+playmaking:
+  label: "playmaking"
+
+positioning:
+  label: "positioning"
+
+positions:
+  label: "positions"
+
+power:
+  label: "power"
+
+power-hitting:
+  label: "power hitting"
+
+power-play:
+  label: "power play"
+
+power-zones:
+  label: "power zones"
+
+practice:
+  label: "practice"
+
+pre-match-nutrition:
+  label: "pre-match nutrition"
+
+preparation:
+  label: "preparation"
+
+prevention:
+  label: "prevention"
+
+psychology:
+  label: "psychology"
+
+puck-control:
+  label: "puck control"
+
+punches:
+  label: "punches"
+
+racing-tactics:
+  label: "racing tactics"
+
+racket:
+  label: "racket"
+
+racquet-selection:
+  label: "racquet selection"
+
+rally:
+  label: "rally"
+
+ranks:
+  label: "ranks"
+
+rebounding:
+  label: "rebounding"
+
+recovery:
+  label: "recovery"
+
+regulations:
+  label: "regulations"
+
+return:
+  label: "return"
+
+reversals:
+  label: "reversals"
+
+road-rules:
+  label: "road rules"
+
+rules:
+  label: "rules"
+
+safety:
+  label: "safety"
+
+sanchin:
+  label: "sanchin"
+
+saucer-pass:
+  label: "saucer pass"
+
+scoring:
+  label: "scoring"
+
+scotland-golf:
+  label: "scotland golf"
+
+self-defense:
+  label: "self defense"
+
+serve:
+  label: "serve"
+
+shoes:
+  label: "shoes"
+
+shooting:
+  label: "shooting"
+
+shotokan:
+  label: "shotokan"
+
+shots:
+  label: "shots"
+
+singles:
+  label: "singles"
+
+six-hitting:
+  label: "six hitting"
+
+skates:
+  label: "skates"
+
+skating:
+  label: "skating"
+
+skills:
+  label: "skills"
+
+slap-shot:
+  label: "slap shot"
+
+slipping:
+  label: "slipping"
+
+soccer-drills:
+  label: "soccer drills"
+
+soccer-safety:
+  label: "soccer safety"
+
+soft-game:
+  label: "soft game"
+
+solo:
+  label: "solo"
+
+sparring:
+  label: "sparring"
+
+speed:
+  label: "speed"
+
+spin-bowling:
+  label: "spin bowling"
+
+splits:
+  label: "splits"
+
+sports-nutrition:
+  label: "sports nutrition"
+
+sports-psychology:
+  label: "sports psychology"
+
+stance:
+  label: "stance"
+
+statistics:
+  label: "statistics"
+
+stickhandling:
+  label: "stickhandling"
+
+strategy:
+  label: "strategy"
+
+street-fighting:
+  label: "street fighting"
+
+strength:
+  label: "strength"
+
+strength-training:
+  label: "strength training"
+
+stretching:
+  label: "stretching"
+
+strikes:
+  label: "strikes"
+
+stumping:
+  label: "stumping"
+
+swim-gear:
+  label: "swim gear"
+
+swim-meets:
+  label: "swim meets"
+
+swim-training:
+  label: "swim training"
+
+swim-training-plans:
+  label: "swim training plans"
+
+swimmer-development:
+  label: "swimmer development"
+
+swimmer-diet:
+  label: "swimmer diet"
+
+swimmer-s-shoulder:
+  label: "swimmer's shoulder"
+
+swimming-basics:
+  label: "swimming basics"
+
+swimming-conditioning:
+  label: "swimming conditioning"
+
+swimming-confidence:
+  label: "swimming confidence"
+
+swimming-drills:
+  label: "swimming drills"
+
+swimming-endurance:
+  label: "swimming endurance"
+
+swimming-equipment:
+  label: "swimming equipment"
+
+swimming-evolution:
+  label: "swimming evolution"
+
+swimming-fundamentals:
+  label: "swimming fundamentals"
+
+swimming-history:
+  label: "swimming history"
+
+swimming-injury-prevention:
+  label: "swimming injury prevention"
+
+swimming-mechanics:
+  label: "swimming mechanics"
+
+swimming-mental-toughness:
+  label: "swimming mental toughness"
+
+swimming-nutrition:
+  label: "swimming nutrition"
+
+swimming-performance:
+  label: "swimming performance"
+
+swimming-safety:
+  label: "swimming safety"
+
+swimming-sessions:
+  label: "swimming sessions"
+
+swimming-strokes:
+  label: "swimming strokes"
+
+swimming-technique:
+  label: "swimming technique"
+
+swimming-workouts:
+  label: "swimming workouts"
+
+swing:
+  label: "swing"
+
+tactics:
+  label: "tactics"
+
+takedowns:
+  label: "takedowns"
+
+team-management:
+  label: "team management"
+
+team-play:
+  label: "team play"
+
+team-racing:
+  label: "team racing"
+
+team-shape:
+  label: "team shape"
+
+teamwork:
+  label: "teamwork"
+
+technique:
+  label: "technique"
+
+techniques:
+  label: "techniques"
+
+tennis-agility:
+  label: "tennis agility"
+
+tennis-basics:
+  label: "tennis basics"
+
+tennis-biomechanics:
+  label: "tennis biomechanics"
+
+tennis-coaching:
+  label: "tennis coaching"
+
+tennis-conditioning:
+  label: "tennis conditioning"
+
+tennis-corrections:
+  label: "tennis corrections"
+
+tennis-diet:
+  label: "tennis diet"
+
+tennis-doubles:
+  label: "tennis doubles"
+
+tennis-equipment:
+  label: "tennis equipment"
+
+tennis-evolution:
+  label: "tennis evolution"
+
+tennis-fitness:
+  label: "tennis fitness"
+
+tennis-focus:
+  label: "tennis focus"
+
+tennis-footwork:
+  label: "tennis footwork"
+
+tennis-formations:
+  label: "tennis formations"
+
+tennis-fundamentals:
+  label: "tennis fundamentals"
+
+tennis-health:
+  label: "tennis health"
+
+tennis-history:
+  label: "tennis history"
+
+tennis-injuries:
+  label: "tennis injuries"
+
+tennis-mental-toughness:
+  label: "tennis mental toughness"
+
+tennis-mistakes:
+  label: "tennis mistakes"
+
+tennis-movement:
+  label: "tennis movement"
+
+tennis-nutrition:
+  label: "tennis nutrition"
+
+tennis-origins:
+  label: "tennis origins"
+
+tennis-psychology:
+  label: "tennis psychology"
+
+tennis-serve:
+  label: "tennis serve"
+
+tennis-serve-mechanics:
+  label: "tennis serve mechanics"
+
+tennis-singles:
+  label: "tennis singles"
+
+tennis-strategy:
+  label: "tennis strategy"
+
+tennis-strength:
+  label: "tennis strength"
+
+tennis-strings:
+  label: "tennis strings"
+
+tennis-stroke-mechanics:
+  label: "tennis stroke mechanics"
+
+tennis-technique:
+  label: "tennis technique"
+
+tennis-technique-errors:
+  label: "tennis technique errors"
+
+tennis-techniques:
+  label: "tennis techniques"
+
+tennis-tournament:
+  label: "tennis tournament"
+
+terminology:
+  label: "terminology"
+
+third-shot:
+  label: "third shot"
+
+throwing:
+  label: "throwing"
+
+topspin:
+  label: "topspin"
+
+tournament:
+  label: "tournament"
+
+tournament-preparation:
+  label: "tournament preparation"
+
+traffic-safety:
+  label: "traffic safety"
+
+training:
+  label: "training"
+
+training-equipment:
+  label: "training equipment"
+
+triathlon-swimming:
+  label: "triathlon swimming"
+
+visualization:
+  label: "visualization"
+
+warm-up:
+  label: "warm up"
+
+weight:
+  label: "weight"
+
+weight-classes:
+  label: "weight classes"
+
+weight-management:
+  label: "weight management"
+
+wicket-keeping:
+  label: "wicket keeping"
+
+women:
+  label: "women"
+
+wrist-shot:
+  label: "wrist shot"
+
+youth:
+  label: "youth"
+
+youth-basketball:
+  label: "youth basketball"
+
+youth-cricket:
+  label: "youth cricket"
+
+youth-cycling:
+  label: "youth cycling"
+
+youth-golf:
+  label: "youth golf"
+
+youth-hockey:
+  label: "youth hockey"
+
+youth-soccer:
+  label: "youth soccer"
+
+youth-swimming:
+  label: "youth swimming"
+
+youth-tennis:
+  label: "youth tennis"

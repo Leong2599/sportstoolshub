@@ -1,0 +1,58 @@
+.zonesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--sth-space-4);
+  margin-top: var(--sth-space-4);
+}
+
+.zone {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-2);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.zoneHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sth-space-2);
+}
+
+.zoneName {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-md);
+  font-weight: 600;
+}
+
+.zoneIntensity {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.zoneRange {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sth-space-2);
+}
+
+.zoneBpm {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-2xl);
+  font-weight: 700;
+}
+
+.zonePercentage {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.zoneDescription {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  line-height: var(--sth-line-height-relaxed);
+}

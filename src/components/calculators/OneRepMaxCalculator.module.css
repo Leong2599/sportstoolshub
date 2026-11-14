@@ -1,0 +1,20 @@
+.repMaxList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.repMaxItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sth-space-3);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  font-weight: 500;
+}

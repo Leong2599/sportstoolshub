@@ -1,0 +1,209 @@
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-4);
+  padding-top: var(--sth-space-4);
+  border-top: 1px solid var(--sth-color-border);
+}
+
+.groupTitle {
+  margin: 0;
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-md);
+  font-weight: 700;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  text-align: center;
+}
+
+.metricLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.metricValue {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.metricSublabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.list {
+  margin: 0 0 var(--sth-space-4);
+  padding-left: var(--sth-space-5);
+  color: var(--sth-color-text-muted);
+  line-height: var(--sth-line-height-relaxed);
+}
+
+.list li {
+  margin-bottom: var(--sth-space-2);
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin-bottom: var(--sth-space-4);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-sm);
+}
+
+.table th,
+.table td {
+  padding: 0.625rem var(--sth-space-3);
+  border-bottom: 1px solid var(--sth-color-border);
+  text-align: left;
+}
+
+.table th {
+  color: var(--sth-color-text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.primaryRow {
+  background: var(--sth-color-primary-lightest);
+  font-weight: 600;
+}
+
+.splitGrid,
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.splitItem,
+.comparisonItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.splitName,
+.comparisonLabel {
+  color: var(--sth-color-text);
+  font-weight: 600;
+}
+
+.splitTime,
+.comparisonValue {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-lg);
+  font-weight: 700;
+}
+
+.splitPercent,
+.comparisonDetail {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.bar {
+  height: 0.5rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--sth-color-border);
+}
+
+.barFill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--sth-color-primary);
+}
+
+.classList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-2);
+  margin-bottom: var(--sth-space-4);
+}
+
+.classItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.classPrimary {
+  border-color: var(--sth-color-primary);
+  background: var(--sth-color-primary-lightest);
+}
+
+.className {
+  color: var(--sth-color-text);
+  font-weight: 600;
+}
+
+.classDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sth-space-3);
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.zoneGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.zoneItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.zoneName {
+  color: var(--sth-color-text);
+  font-weight: 600;
+}
+
+.zonePace {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-lg);
+  font-weight: 700;
+}
+
+.zonePercent {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}

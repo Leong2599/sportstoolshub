@@ -1,0 +1,9 @@
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sth-space-4);
+}
+
+.cta a {
+  text-decoration: none;
+}

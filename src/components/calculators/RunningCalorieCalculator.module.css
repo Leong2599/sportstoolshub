@@ -1,0 +1,82 @@
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-4);
+  padding-top: var(--sth-space-4);
+  border-top: 1px solid var(--sth-color-border);
+}
+
+.groupTitle {
+  margin: 0;
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-md);
+  font-weight: 700;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  text-align: center;
+}
+
+.statLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.statValue {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.breakdownGrid,
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.breakdownItem,
+.comparisonItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.breakdownLabel,
+.comparisonActivity {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.breakdownValue,
+.comparisonCalories {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.breakdownPercent {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}

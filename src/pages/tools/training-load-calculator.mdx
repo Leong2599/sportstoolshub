@@ -1,0 +1,51 @@
+---
+title: Training Load Calculator (CTL/ATL/TSB)
+description: Calculate Chronic Training Load, Acute Training Load, and Training Stress Balance for optimal fatigue and form modeling
+hide_table_of_contents: true
+---
+
+import {TrainingLoadCalculator} from '@site/src/components/calculators/TrainingLoadCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Training Load Calculator (CTL/ATL/TSB)"
+  subtitle="Calculate Chronic Training Load, Acute Training Load, and Training Stress Balance for optimal fatigue and form modeling"
+>
+  <TrainingLoadCalculator />
+
+  <ToolInfo>
+
+## Understanding Training Load Metrics
+
+Training load modelling splits your workload into a slow-moving fitness signal and a fast-moving fatigue signal, so you can see whether you are fresh enough to race.
+
+### Chronic Training Load (CTL)
+
+- 42-day exponential moving average of daily TSS
+- Represents your current fitness level
+- Slow to change, builds gradually over time
+- Higher CTL = better fitness/endurance
+
+### Acute Training Load (ATL)
+
+- 7-day exponential moving average of daily TSS
+- Represents your current fatigue level
+- Changes quickly based on recent training
+- Higher ATL = more fatigue from recent training
+
+### Training Stress Balance (TSB)
+
+- TSB = CTL - ATL (Fitness - Fatigue)
+- Represents your current form/readiness to perform
+- Positive TSB = Fresh, ready to perform
+- Negative TSB = Fatigued, building fitness
+
+### Optimal Ranges by Experience
+
+- **Beginner:** CTL 20-40, TSB +5 to +25
+- **Intermediate:** CTL 40-70, TSB 0 to +20
+- **Advanced:** CTL 70-100, TSS 70-120 daily
+- **Elite:** CTL 100-150+, TSS 100-200 daily
+
+</ToolInfo>
+</ToolPage>

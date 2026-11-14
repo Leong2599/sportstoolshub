@@ -1,0 +1,93 @@
+name: CI
+
+# Every push and pull request is validated against the same gates the cutover
+# relies on: types, tests, and a production-shaped build with strict legacy
+# alias coverage. The build is also uploaded as an artifact so a reviewer can
+# inspect (or `npm run serve`) the exact output without deploying anything.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Typecheck, test, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          # The search-index test imports `src/data/tools.ts` from a script, so
+          # the runner needs native TypeScript stripping (Node 22.6+). jsdom 30
+          # additionally requires 22.22.2+.
+          node-version: '22.x'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm run test:run
+
+      - name: Build
+        env:
+          # Fails the build when a legacy URL has no target or collides with a
+          # real route. All content tickets are landed, so strict is the gate.
+          LEGACY_ALIASES_STRICT: '1'
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build-${{ github.sha }}
+          path: build
+          retention-days: 7
+          if-no-files-found: error
+
+      # The cutover gate: every legacy URL, canonical route, feed, tag page,
+      # sitemap entry and internal link has to survive. The check runs over
+      # HTTP against the served build so that real status codes are asserted.
+      # `--skip-content` because the legacy site is not part of this repository
+      # (content parity is verified from the legacy checkout, see
+      # docs/cutover-runbook.md).
+      - name: Serve the build
+        run: |
+          npx docusaurus serve --port 3100 --no-open > /tmp/serve.log 2>&1 &
+          for attempt in $(seq 1 60); do
+            if curl -sf -o /dev/null http://localhost:3100/; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/serve.log
+          exit 1
+
+      - name: Parity check
+        run: node scripts/parity-check.mjs --base-url=http://localhost:3100 --skip-content
+
+      - name: Upload parity report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: parity-report-${{ github.sha }}
+          path: .docusaurus/parity-report.json
+          retention-days: 7
+          if-no-files-found: warn

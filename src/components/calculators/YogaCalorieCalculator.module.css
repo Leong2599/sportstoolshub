@@ -1,0 +1,90 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sth-space-10);
+  align-items: start;
+}
+
+.sectionTitle {
+  margin: 0 0 var(--sth-space-2);
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-md);
+  font-weight: 700;
+}
+
+.personalInfoSection,
+.yogaSessionSection,
+.advancedOptionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-4);
+  margin-bottom: var(--sth-space-6);
+}
+
+.yogaStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-6);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.statLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.statValue {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.breakdownGrid,
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-6);
+}
+
+.breakdownItem,
+.comparisonItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.breakdownLabel,
+.comparisonActivity {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.breakdownValue,
+.comparisonCalories {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.breakdownPercent,
+.comparisonDifference {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}

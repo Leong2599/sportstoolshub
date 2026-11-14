@@ -1,0 +1,30 @@
+---
+title: BMR Calculator
+description: Calculate your Basal Metabolic Rate (BMR) to determine your body's baseline calorie needs at rest.
+hide_table_of_contents: true
+---
+
+import {BMRCalculator} from '@site/src/components/calculators/BMRCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Basal Metabolic Rate (BMR) Calculator"
+  subtitle="Estimate the number of calories your body needs to function at rest."
+>
+  <BMRCalculator />
+
+  <ToolInfo>
+
+## About BMR
+
+Your Basal Metabolic Rate (BMR) is the number of calories your body needs to accomplish its most basic (basal) life-sustaining functions. This calculator uses the Mifflin-St Jeor equation, which is considered one of the most accurate BMR formulas.
+
+- **Men:** BMR = 10 × weight (kg) + 6.25 × height (cm) - 5 × age + 5
+- **Women:** BMR = 10 × weight (kg) + 6.25 × height (cm) - 5 × age - 161
+
+### Understanding Your BMR
+
+Your BMR is the number of calories required to keep your body functioning at rest. To calculate your total daily calorie needs (TDEE), this number is multiplied by an activity factor.
+
+</ToolInfo>
+</ToolPage>

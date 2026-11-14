@@ -1,0 +1,461 @@
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-4);
+  padding-top: var(--sth-space-5);
+  border-top: 1px solid var(--sth-color-border);
+}
+
+.groupTitle {
+  margin: 0;
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-md);
+  font-weight: 700;
+}
+
+.conditionSelect {
+  min-height: 7.5rem;
+}
+
+.small {
+  margin: 0;
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  line-height: var(--sth-line-height-relaxed);
+}
+
+.goalList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-2);
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  text-align: center;
+}
+
+.highlightValue {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.highlightLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  text-align: center;
+}
+
+.metricLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.metricValue {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-lg);
+  font-weight: 700;
+}
+
+.scheduleGrid,
+.tipsGrid,
+.sourceGrid,
+.mealGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.scheduleItem,
+.tipCard,
+.sourceCard,
+.mealCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.scheduleTime,
+.mealName,
+.sourceTitle,
+.tipTitle {
+  margin: 0;
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 700;
+}
+
+.scheduleAmount {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-lg);
+  font-weight: 700;
+}
+
+.scheduleNote,
+.tipBody {
+  margin: 0;
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  line-height: var(--sth-line-height-relaxed);
+}
+
+.list {
+  margin: 0;
+  padding-left: var(--sth-space-5);
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  line-height: var(--sth-line-height-relaxed);
+}
+
+.list li {
+  margin-bottom: var(--sth-space-1);
+}
+
+.macroGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--sth-space-4);
+  margin-bottom: var(--sth-space-4);
+}
+
+.macroCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  text-align: center;
+}
+
+.macroLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.macroGrams {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-xl);
+  font-weight: 700;
+}
+
+.macroCalories,
+.macroPercent {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.macroBar {
+  height: 0.5rem;
+  margin-top: var(--sth-space-2);
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--sth-color-border);
+}
+
+.macroBarFill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--sth-color-primary);
+}
+
+.mealMacros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sth-space-2);
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.overviewItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  text-align: center;
+}
+
+.overviewLabel {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 500;
+}
+
+.overviewValue {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-lg);
+  font-weight: 700;
+}
+
+.timelineList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.timelineItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-left: 4px solid var(--sth-color-primary);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.timelineTime {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.timelineTitle {
+  margin: 0;
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-md);
+  font-weight: 700;
+}
+
+.timelineBody {
+  margin: 0;
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  line-height: var(--sth-line-height-relaxed);
+}
+
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-2);
+  margin-bottom: var(--sth-space-4);
+}
+
+.scheduleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--sth-space-3);
+  padding: var(--sth-space-3) var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.scheduleRowPre {
+  border-left: 4px solid var(--sth-color-primary);
+}
+
+.scheduleRowPost {
+  border-left: 4px solid var(--sth-color-primary-dark);
+}
+
+.scheduleRowTime {
+  min-width: 4.5rem;
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-md);
+  font-weight: 700;
+}
+
+.scheduleRowBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+}
+
+.scheduleRowType {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 600;
+}
+
+.scheduleRowFocus {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+}
+
+.recommendationList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--sth-space-3);
+  margin-bottom: var(--sth-space-4);
+}
+
+.recommendationItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-1);
+  padding: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.recommendationCategory {
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.recommendationGuideline {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-md);
+  font-weight: 600;
+}
+
+.nutrientGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--sth-space-2);
+  margin-bottom: var(--sth-space-4);
+}
+
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--sth-space-4);
+  margin-bottom: var(--sth-space-4);
+}
+
+.nutrientItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sth-space-2);
+  padding: var(--sth-space-3);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  font-size: var(--sth-font-size-sm);
+}
+
+.nutrientAdequate {
+  border-color: var(--sth-color-primary-lighter);
+  background: var(--sth-color-primary-lightest);
+}
+
+.nutrientInsufficient {
+  border-color: var(--sth-color-border);
+}
+
+.nutrientDeficient {
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+.nutrientName {
+  color: var(--sth-color-text-muted);
+}
+
+.nutrientPercentage {
+  color: var(--sth-color-text);
+  font-weight: 700;
+}
+
+.foodList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-2);
+  margin-bottom: var(--sth-space-4);
+}
+
+.foodItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sth-space-3);
+  padding: var(--sth-space-3) var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+  font-size: var(--sth-font-size-sm);
+}
+
+.foodName {
+  color: var(--sth-color-text);
+}
+
+.foodGl {
+  color: var(--sth-color-text-muted);
+  font-weight: 600;
+}
+
+.foodGroup {
+  margin: 0 0 var(--sth-space-2);
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.riskCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sth-space-2);
+  padding: var(--sth-space-4);
+  margin-bottom: var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-left: 4px solid var(--sth-color-primary);
+  border-radius: var(--sth-radius-sm);
+  background: var(--sth-color-bg);
+}
+
+.riskLevel {
+  color: var(--sth-color-text);
+  font-size: var(--sth-font-size-lg);
+  font-weight: 700;
+}
+
+@media (max-width: 540px) {
+  .macroGrid {
+    grid-template-columns: 1fr;
+  }
+}

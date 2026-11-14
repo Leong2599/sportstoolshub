@@ -1,0 +1,18 @@
+.header {
+  margin-bottom: var(--sth-space-8);
+  font-family: var(--sth-font-sans);
+}
+
+.title {
+  margin: 0 0 var(--sth-space-3);
+  color: var(--sth-color-text);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.description {
+  margin: 0;
+  color: var(--sth-color-text-muted);
+  font-size: var(--sth-font-size-md);
+  line-height: 1.6;
+}

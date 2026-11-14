@@ -1,0 +1,48 @@
+---
+title: Running Calorie Calculator
+description: Calculate calories burned during running with our free running calorie calculator. Get accurate estimates based on distance, pace, weight, and terrain.
+hide_table_of_contents: true
+---
+
+import {RunningCalorieCalculator} from '@site/src/components/calculators/RunningCalorieCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Running Calorie Calculator"
+  subtitle="Calculate calories burned during running based on distance, pace, weight, and terrain"
+>
+  <RunningCalorieCalculator />
+
+  <ToolInfo>
+
+## About Running Calories
+
+Running calorie estimates are built on the MET (Metabolic Equivalent of Task) model: the calories you burn per hour depend on your body weight, how fast you run, and how hard the effort feels. This calculator estimates your burn from your pace and distance, then adjusts for terrain, intensity, and elevation.
+
+### How the Estimate Works
+
+- **Base MET values:** Running speed selects a metabolic equivalent, from 6.0 MET for very slow jogging up to 18.0 MET for sprint or interval pace.
+- **Terrain adjustment:** Flat road is the baseline; hilly road, trail, sand, and treadmill running each apply their own multiplier.
+- **Intensity adjustment:** Perceived effort scales the result from easy through race pace.
+- **Elevation bonus:** Every meter of climbing adds a small terrain bonus proportional to your body weight.
+
+### Factors That Change Your Burn
+
+- **Body Weight:** Heavier runners burn more calories over the same distance
+- **Running Speed:** Faster paces raise the base MET value
+- **Terrain:** Hills and soft surfaces require more energy than flat road
+- **Perceived Intensity:** The same pace feels harder on a hot or hilly day
+- **Elevation Gain:** Climbing adds energy cost beyond the flat-equivalent pace
+
+### Recovery Notes
+
+For optimal recovery, consume a mix of carbohydrates and protein within 2 hours of your run, and stay well-hydrated throughout the day.
+
+### Limitations
+
+- Estimates are not medical measurements and individual metabolism varies.
+- Weather, hydration, and fatigue are not modelled.
+- Use the figure as a guide for fuelling and training load, not a precise prescription.
+
+</ToolInfo>
+</ToolPage>

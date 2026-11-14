@@ -1,0 +1,55 @@
+---
+title: Golf Handicap Calculator
+description: Calculate your golf handicap index with our free handicap calculator. Get accurate USGA handicap calculations and course handicap predictions.
+hide_table_of_contents: true
+---
+
+import {GolfHandicapCalculator} from '@site/src/components/calculators/GolfHandicapCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Golf Handicap Calculator"
+  subtitle="Calculate your golf handicap index and course handicap using official USGA methodology"
+>
+  <GolfHandicapCalculator />
+
+  <ToolInfo>
+
+## About Golf Handicaps
+
+A golf handicap allows players of different skill levels to compete fairly by adjusting scores based on course difficulty and player ability.
+
+### Handicap Index vs Course Handicap
+
+- **Handicap Index:** A measure of a player's potential ability, portable across all courses
+- **Course Handicap:** The number of strokes a player receives on a specific course
+- **Net Score:** Gross score minus course handicap
+
+### How Handicap is Calculated
+
+- **Score Differentials:** (Adjusted Gross Score - Course Rating) × 113 ÷ Slope Rating
+- **Best Scores:** Uses the best 8 of 20 most recent scores
+- **Exceptional Scores:** Bonuses for scores 7+ strokes better than handicap
+- **Maximum Handicap:** 54.0 for men and women (no separate maximums)
+
+### Course Rating and Slope
+
+- **Course Rating:** Expected score for a scratch golfer (par average)
+- **Slope Rating:** Relative difficulty for bogey golfers (55-155 scale)
+- **113 Slope:** Standard slope rating for reference
+
+### Playing Handicap
+
+For competitions, playing handicap may include additional adjustments like:
+percentage reductions, stroke allocations for specific formats, and maximum limits.
+
+### Improving Your Handicap
+
+- Consistent practice and lessons
+- Track all scores accurately
+- Play different types of courses
+- Focus on course management
+- Improve short game and putting
+
+</ToolInfo>
+</ToolPage>

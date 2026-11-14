@@ -1,0 +1,50 @@
+---
+title: Heart Rate Calculator
+description: Calculate your target heart rate zones for optimal training with our free heart rate calculator. Get personalized zone recommendations based on age and fitness level.
+hide_table_of_contents: true
+---
+
+import {HeartRateCalculator} from '@site/src/components/calculators/HeartRateCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Heart Rate Calculator"
+  subtitle="Calculate your target heart rate zones for optimal training and cardio performance"
+>
+  <HeartRateCalculator />
+
+  <ToolInfo>
+
+## About Heart Rate Training
+
+Heart rate training zones help you optimize your workouts by training at the right intensity for your goals.
+
+### Calculation Methods
+
+- **Karvonen Method:** Uses heart rate reserve (Max HR - Resting HR) for more accurate zones
+- **Age-Predicted Method:** Simple formula (220 - age) but less accurate
+
+### Zone Benefits
+
+- **Zone 1 (50-60%):** Active recovery, warm-up, cool-down
+- **Zone 2 (60-70%):** Base building, fat burning, endurance
+- **Zone 3 (70-80%):** Aerobic fitness, cardiovascular improvement
+- **Zone 4 (80-90%):** Lactate threshold, race pace training
+- **Zone 5 (90-100%):** Maximum effort, HIIT, sprint training
+
+### Measuring Your Heart Rate
+
+- **Manual:** Count beats for 30 seconds and multiply by 2
+- **Chest Strap:** Most accurate for training
+- **Wrist Monitor:** Convenient but less accurate during intense exercise
+- **Fitness Trackers:** Good for general monitoring
+
+### Safety Considerations
+
+- Consult a doctor before starting intense training
+- Listen to your body and don't exceed comfortable limits
+- Stop exercising if you feel dizzy, chest pain, or unusual discomfort
+- Stay hydrated and properly fueled during workouts
+
+</ToolInfo>
+</ToolPage>

@@ -1,0 +1,42 @@
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import './tokens.css';
+@import './base.css';
+@import './shell.css';
+@import './prose.css';
+
+:root {
+  --ifm-color-primary: var(--sth-color-primary);
+  --ifm-color-primary-dark: var(--sth-color-primary-dark);
+  --ifm-color-primary-darker: var(--sth-color-primary-darker);
+  --ifm-color-primary-darkest: var(--sth-color-primary-darkest);
+  --ifm-color-primary-light: var(--sth-color-primary-light);
+  --ifm-color-primary-lighter: var(--sth-color-primary-lighter);
+  --ifm-color-primary-lightest: var(--sth-color-primary-lightest);
+  --ifm-font-family-base: var(--sth-font-sans);
+  --ifm-font-family-monospace: var(--sth-font-mono);
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: var(--sth-line-height-normal);
+  --ifm-background-color: var(--sth-color-bg);
+  --ifm-background-surface-color: var(--sth-color-surface);
+  --ifm-color-content: var(--sth-color-text-muted);
+  --ifm-color-content-secondary: var(--sth-color-text-subtle);
+  --ifm-heading-color: var(--sth-color-text);
+  --ifm-link-color: var(--sth-color-primary-dark);
+  --ifm-link-hover-color: var(--sth-color-primary);
+  --ifm-navbar-background-color: var(--sth-color-surface);
+  --ifm-navbar-shadow: var(--sth-shadow-sm);
+  --ifm-footer-background-color: var(--sth-color-text);
+  --ifm-footer-color: var(--sth-color-surface);
+  --ifm-footer-link-color: var(--sth-color-border);
+  --ifm-footer-title-color: var(--sth-color-primary);
+  --ifm-container-width: var(--sth-container);
+  --ifm-global-radius: var(--sth-radius-md);
+  --ifm-global-shadow-md: var(--sth-shadow-md);
+  --ifm-color-emphasis-300: var(--sth-color-border);
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.1);
+}

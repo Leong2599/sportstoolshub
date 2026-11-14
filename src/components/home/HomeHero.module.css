@@ -1,0 +1,185 @@
+.hero {
+  padding: var(--sth-space-20) var(--sth-space-5);
+  text-align: center;
+  color: var(--sth-color-surface);
+  background-color: var(--sth-color-primary-darker);
+  /* The source hero photo with a brand overlay; the flat gradient behind it
+     is the fallback if the image is missing. The photo is bundled from
+     `src/assets/`, so the build ships it once. */
+  background-image:
+    linear-gradient(rgba(30, 64, 175, 0.82), rgba(30, 64, 175, 0.82)),
+    url('../../assets/hero-1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.title {
+  margin: 0 0 var(--sth-space-5);
+  color: var(--sth-color-surface);
+  font-size: clamp(2.25rem, 6vw, 3.8rem);
+  font-weight: 700;
+  line-height: var(--sth-line-height-tight);
+}
+
+.subtitle {
+  max-width: 48rem;
+  margin: 0 auto var(--sth-space-10);
+  color: var(--sth-color-surface);
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  line-height: var(--sth-line-height-normal);
+  opacity: 0.95;
+}
+
+.search {
+  position: relative;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--sth-radius-lg);
+  box-shadow: var(--sth-shadow-lg);
+  transition: box-shadow var(--sth-transition-base);
+}
+
+.searchBox:focus-within {
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.3),
+    var(--sth-shadow-lg);
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+  padding: var(--sth-space-4) calc(var(--sth-space-5) + 2.75rem) var(--sth-space-4)
+    var(--sth-space-5);
+  border: none;
+  background: transparent;
+  color: var(--sth-color-text);
+  font-family: inherit;
+  font-size: var(--sth-font-size-md);
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: var(--sth-color-text-subtle);
+}
+
+.searchInput::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.searchButton {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sth-space-3);
+  border: none;
+  border-radius: var(--sth-radius-md);
+  background: var(--sth-color-primary);
+  color: var(--sth-color-surface);
+  cursor: pointer;
+  transition: background-color var(--sth-transition-fast);
+}
+
+.searchButton:hover {
+  background: var(--sth-color-primary-dark);
+}
+
+.results {
+  position: absolute;
+  top: calc(100% + var(--sth-space-2));
+  left: 0;
+  right: 0;
+  z-index: 10;
+  max-height: 26rem;
+  overflow-y: auto;
+  padding: var(--sth-space-2);
+  border: 1px solid var(--sth-color-border);
+  border-radius: var(--sth-radius-lg);
+  background: var(--sth-color-surface);
+  box-shadow: var(--sth-shadow-lg);
+  color: var(--sth-color-text-muted);
+  text-align: left;
+}
+
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sth-space-3);
+  padding: var(--sth-space-2) var(--sth-space-3);
+  border-bottom: 1px solid var(--sth-color-border);
+}
+
+.resultsCount {
+  color: var(--sth-color-text-subtle);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 600;
+}
+
+.clearButton {
+  padding: var(--sth-space-1) var(--sth-space-2);
+  border: none;
+  border-radius: var(--sth-radius-sm);
+  background: transparent;
+  color: var(--sth-color-text-subtle);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--sth-font-size-sm);
+}
+
+.clearButton:hover {
+  background: var(--sth-color-bg);
+  color: var(--sth-color-text);
+}
+
+.searchAll {
+  display: block;
+  padding: var(--sth-space-3);
+  border-top: 1px solid var(--sth-color-border);
+  color: var(--sth-color-primary-dark);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.searchAll:hover {
+  color: var(--sth-color-primary);
+  text-decoration: underline;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--sth-space-8);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-block: var(--sth-space-12);
+  }
+
+  .subtitle {
+    margin-bottom: var(--sth-space-8);
+  }
+
+  .searchInput {
+    padding: var(--sth-space-3) calc(var(--sth-space-4) + 2.5rem) var(--sth-space-3)
+      var(--sth-space-4);
+    font-size: var(--sth-font-size-sm);
+  }
+}

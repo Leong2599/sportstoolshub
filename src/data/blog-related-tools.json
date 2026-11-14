@@ -1,0 +1,142 @@
+{
+  "basketball": [
+    {
+      "slug": "basketball-vertical-jump-analyzer",
+      "title": "Basketball Vertical Jump Analyzer"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "boxing": [
+    {
+      "slug": "combat-sports-weight-class-optimizer",
+      "title": "Combat Sports Weight Class Optimizer"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "cricket": [
+    {
+      "slug": "cricket-bowling-workload-tracker",
+      "title": "Cricket Bowling Workload Tracker"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "cycling": [
+    {
+      "slug": "cycling-power",
+      "title": "Cycling Power Calculator"
+    },
+    {
+      "slug": "cycling-gear-ratio-calculator",
+      "title": "Cycling Gear Ratio Calculator"
+    }
+  ],
+  "golf": [
+    {
+      "slug": "golf-handicap-calculator",
+      "title": "Golf Handicap Calculator"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "hockey": [
+    {
+      "slug": "injury-risk-calculator",
+      "title": "Sports Injury Risk Calculator"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "karate": [
+    {
+      "slug": "combat-sports-weight-class-optimizer",
+      "title": "Combat Sports Weight Class Optimizer"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "pickleball": [
+    {
+      "slug": "injury-risk-calculator",
+      "title": "Sports Injury Risk Calculator"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "soccer": [
+    {
+      "slug": "soccer-match-load-calculator",
+      "title": "Soccer Match Load Calculator"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "squash": [
+    {
+      "slug": "injury-risk-calculator",
+      "title": "Sports Injury Risk Calculator"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "swimming": [
+    {
+      "slug": "swim-pace",
+      "title": "Swim Pace Calculator"
+    },
+    {
+      "slug": "swimming-stroke-efficiency-calculator",
+      "title": "Swimming Stroke Efficiency Calculator"
+    }
+  ],
+  "table-tennis": [
+    {
+      "slug": "injury-risk-calculator",
+      "title": "Sports Injury Risk Calculator"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "tennis": [
+    {
+      "slug": "tennis-match-energy-expenditure-tool",
+      "title": "Tennis Match Energy Expenditure"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ],
+  "wrestling": [
+    {
+      "slug": "combat-sports-weight-class-optimizer",
+      "title": "Combat Sports Weight Class Optimizer"
+    },
+    {
+      "slug": "training-load-calculator",
+      "title": "Training Load Calculator (CTL/ATL/TSB)"
+    }
+  ]
+}

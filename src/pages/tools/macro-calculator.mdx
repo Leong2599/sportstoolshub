@@ -1,0 +1,52 @@
+---
+title: Macro Calculator
+description: Calculate your macronutrient needs (carbs, protein, fats) with our free macro calculator. Get personalized ratios for your fitness goals and dietary preferences.
+hide_table_of_contents: true
+---
+
+import {MacroCalculator} from '@site/src/components/calculators/MacroCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Macro Calculator"
+  subtitle="Calculate your daily macronutrient needs for carbs, protein, and fats with personalized ratios for your fitness goals"
+>
+  <MacroCalculator />
+
+  <ToolInfo>
+
+## About Macronutrients
+
+Macronutrients are the nutrients your body needs in large amounts: carbohydrates, proteins, and fats. Each plays a crucial role in health, performance, and body composition.
+
+### Macronutrient Roles
+
+- **Carbohydrates (4 cal/g):** Primary energy source, fuels brain and muscles
+- **Proteins (4 cal/g):** Builds and repairs tissues, supports immune function
+- **Fats (9 cal/g):** Hormone production, vitamin absorption, energy storage
+
+### Common Macro Ratios
+
+- **Balanced (40/30/30):** 40% carbs, 30% protein, 30% fats
+- **Low Carb (20/40/40):** 20% carbs, 40% protein, 40% fats
+- **High Carb (60/20/20):** 60% carbs, 20% protein, 20% fats
+- **Keto (5/25/70):** 5% carbs, 25% protein, 70% fats
+- **Bulking (45/30/25):** 45% carbs, 30% protein, 25% fats
+- **Cutting (40/40/20):** 40% carbs, 40% protein, 20% fats
+
+### Protein Needs
+
+- **Sedentary:** 0.8-1.0g per kg body weight
+- **Active:** 1.2-1.6g per kg body weight
+- **Strength Athletes:** 1.6-2.2g per kg body weight
+- **Endurance Athletes:** 1.4-1.8g per kg body weight
+
+### Diet-Specific Considerations
+
+- **Vegetarian/Vegan:** May need 10-20% more protein due to lower digestibility
+- **Keto:** Very low carbs, high healthy fats, moderate protein
+- **Paleo:** No grains/legumes, focus on whole foods
+- **Mediterranean:** Emphasis on healthy fats and complex carbs
+
+</ToolInfo>
+</ToolPage>

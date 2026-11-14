@@ -1,0 +1,20 @@
+.searchLink {
+  display: inline-block;
+  margin-bottom: var(--sth-space-6);
+  padding: var(--sth-space-2) var(--sth-space-4);
+  border: 1px solid var(--sth-color-border);
+  border-radius: 999px;
+  background: var(--sth-color-surface);
+  color: var(--sth-color-primary-dark);
+  font-size: var(--sth-font-size-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    border-color var(--sth-transition-fast),
+    color var(--sth-transition-fast);
+}
+
+.searchLink:hover {
+  border-color: var(--sth-color-primary);
+  color: var(--sth-color-primary);
+}

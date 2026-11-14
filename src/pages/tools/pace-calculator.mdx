@@ -1,0 +1,52 @@
+---
+title: Pace Calculator
+description: Calculate your running pace and race time predictions with our free pace calculator. Get splits, target paces, and performance predictions for various distances.
+hide_table_of_contents: true
+---
+
+import {PaceCalculator} from '@site/src/components/calculators/PaceCalculator';
+import {ToolInfo, ToolPage} from '@site/src/components/calculators/ToolPage';
+
+<ToolPage
+  title="Pace Calculator"
+  subtitle="Calculate your running pace, race time predictions, and training splits for optimal performance"
+>
+  <PaceCalculator />
+
+  <ToolInfo>
+
+## About Running Pace
+
+Running pace is a key metric for tracking performance and planning training strategies. Understanding your pace helps you set realistic goals and optimize your training.
+
+### Pace Types
+
+- **Easy Pace:** Comfortable conversational pace for base building
+- **Tempo Pace:** "Comfortably hard" pace for threshold training
+- **Interval Pace:** Fast pace for high-intensity interval training
+- **Race Pace:** Goal pace for your target race distance
+
+### Training Zones
+
+- **Zone 1 (Recovery):** Very easy, 65-75% of max heart rate
+- **Zone 2 (Endurance):** Easy, 75-80% of max heart rate
+- **Zone 3 (Tempo):** Moderate, 80-85% of max heart rate
+- **Zone 4 (Threshold):** Hard, 85-90% of max heart rate
+- **Zone 5 (VO2 Max):** Very hard, 90-100% of max heart rate
+
+### Race Prediction Formulas
+
+- **Riegel Formula:** Predicts race times based on recent performance
+- **Age Grading:** Compares performance to age-group standards
+- **VDOT Calculator:** Estimates aerobic capacity from race times
+
+### Pace Improvement Tips
+
+- Consistent training with varied intensities
+- Proper recovery and rest days
+- Strength training for running economy
+- Nutrition and hydration optimization
+- Regular pace testing and adjustment
+
+</ToolInfo>
+</ToolPage>

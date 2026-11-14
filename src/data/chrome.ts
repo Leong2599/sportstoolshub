@@ -140,5 +140,7 @@ export const FOOTER_BRAND_COLUMN = {
  * it stays a plain anchor instead of a Docusaurus link.
  */
 export function buildFooterCopyright(year: number = new Date().getFullYear()): string {
-  return `&copy; ${year} ${SITE_BRAND.title}. All rights reserved. | <a href="/sitemap.xml">Sitemap</a>`;
+  return `&copy; ${year} ${SITE_BRAND.title}. All rights reserved. 
+  | <a href="https://pruneseo.com">PruneSEO</a>
+  | <a href="/sitemap.xml">Sitemap</a>`;
 }

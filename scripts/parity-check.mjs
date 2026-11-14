@@ -37,7 +37,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 export const DEFAULT_ORIGIN = 'https://sportstoolshub.com';
 export const EXPECTED_CNAME = 'sportstoolshub.com';
-export const EXPECTED_RSS_ITEMS = 214;
+export const EXPECTED_RSS_ITEMS = 424;
 export const SITE_NAME = 'Sports Tools Hub';
 export const DEFAULT_LEGACY_FILE = 'src/data/legacy-urls.json';
 export const DEFAULT_BASELINE_FILE = 'scripts/parity/content-baseline.json';

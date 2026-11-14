@@ -55,7 +55,7 @@ PARITY_SOURCE_DIR="C:\Users\user\Documents\Production\sport_tools" \
 - all 258 legacy `.html` aliases answer with the right canonical + meta refresh
 - all 258 targets answer 200 with exactly one `h1`, a title and the expected canonical
 - sitemap lists every canonical route, zero aliases, no duplicates
-- `robots.txt`, `CNAME`, RSS (214 items) and Atom, 379 tag pages
+- `robots.txt`, `CNAME`, RSS (424 items) and Atom, 379 tag pages
 - no broken internal link across all 936 built pages
 - titles/headings match the legacy source except for the 61 reviewed deltas in
   `scripts/parity/content-baseline.json` (emoji, frontmatter copy edits, and
@@ -78,7 +78,7 @@ When the preview is green and the product owner signs off:
      `https://sportstoolshub.com/tools/bmi-calculator`
    - `https://sportstoolshub.com/sitemap.xml` and `/robots.txt` advertise the live sitemap
    - `https://sportstoolshub.com/CNAME` contains `sportstoolshub.com`
-   - RSS at `/blog/rss.xml` has 214 items
+   - RSS at `/blog/rss.xml` has 424 items
 5. Run CI once more against `main` — the CI parity step starts a local server
    and checks real HTTP status codes against the build.
 

@@ -98,9 +98,8 @@ const config: Config = {
           authorsMapPath: 'authors.yml',
           feedOptions: {
             type: ['rss', 'atom'],
-            // The source has 214 posts. The plugin default of 20 would show
-            // a feed covering less than a tenth of the archive.
-            limit: 250,
+            // Large archive; keep feed coverage high for SEO/indexing.
+            limit: 500,
             xslt: true,
           },
           onInlineTags: 'warn',

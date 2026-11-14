@@ -129,7 +129,7 @@ Blog posts live in `blog/<sport>/<slug>.mdx` and build at `/blog/<sport>/<slug>/
 the primary tag pages; `blog/tags.yml` also carries the topic tags, and `blog/authors.yml` holds the
 single "Sports Tools Hub" author.
 
-The blog feed is capped at 250 items in `docusaurus.config.ts`, which covers the source's 214 posts.
+The blog feed is capped at 500 items in `docusaurus.config.ts` to cover the full archive.
 
 Posts are generated from the read-only source site, so do not hand-edit them - edit the converter and
 re-run it:

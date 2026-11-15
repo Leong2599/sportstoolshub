@@ -93,11 +93,11 @@ const config: Config = {
           // Reading time is derived by the plugin (D5), not authored in the
           // frontmatter.
           showReadingTime: true,
-          // The 14 sports are the primary tag pages; `blog/tags.yml` also
+          // The sport tags are the primary tag pages; `blog/tags.yml` also
           // holds the topic tags the converter writes.
           blogTitle: 'Sports Blog Series',
           blogDescription:
-            'Comprehensive sports blog covering soccer, basketball, tennis, cricket, cycling, swimming, golf, pickleball, hockey, squash, karate, wrestling, boxing, and table tennis. Training, nutrition, equipment, tactics, and player development.',
+            'Comprehensive sports blog covering soccer, basketball, tennis, cricket, cycling, swimming, golf, pickleball, hockey, squash, karate, wrestling, boxing, table tennis, badminton, baseball, volleyball, rugby, athletics, skiing, rowing, fencing, gymnastics, and archery. Training, nutrition, equipment, tactics, and player development.',
           blogSidebarTitle: 'Recent posts',
           blogSidebarCount: 10,
           postsPerPage: 12,

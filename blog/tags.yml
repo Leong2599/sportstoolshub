@@ -1154,3 +1154,46 @@ youth-tennis:
 
 agility:
   label: "agility"
+
+badminton:
+  label: "Badminton"
+  description: "Badminton guides, training, and technique articles."
+
+baseball:
+  label: "Baseball"
+  description: "Baseball guides, training, and technique articles."
+
+volleyball:
+  label: "Volleyball"
+  description: "Volleyball guides, training, and technique articles."
+
+rugby:
+  label: "Rugby"
+  description: "Rugby guides, training, and technique articles."
+
+athletics:
+  label: "Athletics"
+  description: "Track and field guides, training, and technique articles."
+
+skiing:
+  label: "Skiing"
+  description: "Skiing guides, training, and technique articles."
+
+rowing:
+  label: "Rowing"
+  description: "Rowing guides, training, and technique articles."
+
+fencing:
+  label: "Fencing"
+  description: "Fencing guides, training, and technique articles."
+
+gymnastics:
+  label: "Gymnastics"
+  description: "Gymnastics guides, training, and technique articles."
+
+archery:
+  label: "Archery"
+  description: "Archery guides, training, and technique articles."
+
+tips:
+  label: "tips"

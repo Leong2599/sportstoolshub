@@ -108,8 +108,9 @@ const config: Config = {
           authorsMapPath: 'authors.yml',
           feedOptions: {
             type: ['rss', 'atom'],
-            // Large archive; keep feed coverage high for SEO/indexing.
-            limit: 500,
+            // Large archive; cover every post for SEO/indexing. Keep the
+            // parity baseline (EXPECTED_RSS_ITEMS) in sync when adding posts.
+            limit: 700,
             xslt: true,
           },
           onInlineTags: 'warn',

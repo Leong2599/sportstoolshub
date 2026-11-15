@@ -37,7 +37,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 export const DEFAULT_ORIGIN = 'https://sportstoolshub.com';
 export const EXPECTED_CNAME = 'sportstoolshub.com';
-export const EXPECTED_RSS_ITEMS = 424;
+// 424 legacy posts + 200 new sport posts, all covered by the feed limit.
+export const EXPECTED_RSS_ITEMS = 624;
 export const SITE_NAME = 'Sports Tools Hub';
 export const DEFAULT_LEGACY_FILE = 'src/data/legacy-urls.json';
 export const DEFAULT_BASELINE_FILE = 'scripts/parity/content-baseline.json';

@@ -61,11 +61,16 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
 
-  // Internal links are authored without a trailing slash and Docusaurus keeps
-  // them that way. `trailingSlash` is deliberately left unset: that emits
-  // `<route>/index.html` instead of `<route>.html`, which is the layout static
-  // hosts (GitHub Pages) resolve. Setting it to `false` makes every sub-path
-  // resolve to the 404 page.
+  // Canonical URLs carry a trailing slash, so they are `/tools/<slug>/`,
+  // `/blog/<sport>/<slug>/`, `/about/`. That is the form GitHub Pages serves
+  // straight from `<route>/index.html`.
+  //
+  // The extensionless form is owned by the legacy alias layer: GitHub Pages
+  // resolves `/tools/<slug>` to `tools/<slug>.html` when that file exists and
+  // only falls back to `tools/<slug>/index.html` otherwise. The alias layer
+  // writes `tools/<slug>.html` for every legacy URL, so `/tools/<slug>` is the
+  // alias and must redirect to the canonical route - never to itself.
+  trailingSlash: true,
 
   i18n: {
     defaultLocale: 'en',
@@ -79,6 +84,11 @@ const config: Config = {
       'classic',
       {
         docs: false,
+        sitemap: {
+          // The 404 route renders the not-found layout. It is not a page to
+          // index, so it must not be advertised in the sitemap.
+          ignorePatterns: ['/404/'],
+        },
         blog: {
           // Reading time is derived by the plugin (D5), not authored in the
           // frontmatter.

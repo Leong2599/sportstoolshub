@@ -36,8 +36,12 @@ This document covers:
    canonical routes, the sitemap (676 URLs, no aliases), feeds, tag pages,
    internal links, CNAME deletion, and the robots allow policy.
 4. Manually spot check `https://<owner>.github.io/sportstools/tools/bmi-calculator.html`
-   (alias loads, redirects logically to `/sportstools/tools/bmi-calculator`)
+   (alias loads, redirects logically to `/sportstools/tools/bmi-calculator/`)
    and `https://<owner>.github.io/sportstools/404` (branded 404 page).
+   The extensionless `/sportstools/tools/bmi-calculator` must land on the
+   page as well: it is served from the alias file, so it refreshes once to
+   the trailing-slash canonical and stops there. A page that keeps
+   refreshing is the alias pointing at itself.
 
 ### 1.2 Full parity run from the legacy checkout
 
@@ -75,7 +79,7 @@ When the preview is green and the product owner signs off:
 4. After deploy, verify on the live domain:
    - `https://sportstoolshub.com/` loads, branded 404 at `/this-route-does-not-exist`
    - `https://sportstoolshub.com/tools/bmi-calculator.html` → alias, canonical
-     `https://sportstoolshub.com/tools/bmi-calculator`
+     `https://sportstoolshub.com/tools/bmi-calculator/`
    - `https://sportstoolshub.com/sitemap.xml` and `/robots.txt` advertise the live sitemap
    - `https://sportstoolshub.com/CNAME` contains `sportstoolshub.com`
    - RSS at `/blog/rss.xml` has 424 items

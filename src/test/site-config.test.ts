@@ -52,6 +52,13 @@ describe('site configuration', () => {
     expect(config.onBrokenLinks).toBe('throw');
   });
 
+  it('publishes canonical URLs in the trailing-slash form', () => {
+    // GitHub Pages serves `/tools/x/` from `tools/x/index.html`. The
+    // extensionless `/tools/x` is served from `tools/x.html`, the legacy alias
+    // file, so it must not be the canonical form.
+    expect(config.trailingSlash).toBe(true);
+  });
+
   it('ships light mode only', () => {
     expect(config.themeConfig?.colorMode).toMatchObject({
       defaultMode: 'light',

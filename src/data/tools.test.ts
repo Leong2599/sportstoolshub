@@ -85,7 +85,7 @@ describe('tool catalog', () => {
     );
 
     for (const tool of tools) {
-      expect(legacyUrls[tool.legacyPath]).toBe(`/tools/${tool.slug}`);
+      expect(legacyUrls[tool.legacyPath]).toBe(`/tools/${tool.slug}/`);
     }
   });
 

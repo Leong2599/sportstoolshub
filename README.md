@@ -202,9 +202,16 @@ npm run review:blog:headings -- --source="C:\path\to\sport_tools"
 
 ## Legacy URLs
 
-`src/data/legacy-urls.json` is the SEO contract: every legacy `.html` path maps to its clean Docusaurus
-route. The `legacy-aliases` plugin runs after the build, writes an instant meta-refresh alias at each legacy
-path with a canonical link, and records a report in `.docusaurus/legacy-aliases-report.json`.
+`src/data/legacy-urls.json` is the SEO contract: every legacy `.html` path maps to the canonical URL of
+its Docusaurus route (`/tools/<slug>/`, trailing slash included). The `legacy-aliases` plugin runs after
+the build, writes an instant meta-refresh alias at each legacy path with a canonical link, and records a
+report in `.docusaurus/legacy-aliases-report.json`.
+
+The trailing slash is not cosmetic. GitHub Pages resolves an extensionless path to `<path>.html` when
+that file exists, and only falls back to `<path>/index.html` otherwise - so `/tools/<slug>` is the alias
+file, and `/tools/<slug>/` is the page. An alias that pointed at the extensionless form of its own route
+would refresh into itself forever, which is what the canonical URL has to avoid. The plugin checks that
+for every alias it writes and reports the offenders as `broken`; the strict build fails on them.
 
 Regenerate the contract from the read-only source site:
 

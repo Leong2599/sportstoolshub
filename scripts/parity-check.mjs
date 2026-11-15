@@ -364,24 +364,28 @@ export function createDirSource(dir) {
     async get(route) {
       const clean = route.split(/[?#]/)[0] || '/';
       const relative = decodeURIComponent(clean.replace(/^\/+/, ''));
+      // GitHub Pages resolves an extensionless path to `<path>.html` first and
+      // only falls back to `<path>/index.html`. The legacy alias layer writes
+      // `<route>.html`, so this order is what decides whether a route serves
+      // its own page or the alias that shadows it.
       const candidates = clean.endsWith('/') || clean === '/'
-        ? [path.join(rootDir, relative, 'index.html'), path.join(rootDir, `${relative}.html`)]
+        ? [path.join(rootDir, relative, 'index.html')]
         : [
             path.join(rootDir, relative),
-            path.join(rootDir, relative, 'index.html'),
             path.join(rootDir, `${relative}.html`),
+            path.join(rootDir, relative, 'index.html'),
           ];
       for (const candidate of candidates) {
         if (candidate.startsWith(rootDir)) {
           try {
             const body = await readFile(candidate, 'utf8');
-            return {status: 200, body, file: candidate};
+            return {status: 200, body, file: candidate, location: '', redirectStatus: 0};
           } catch {
             /* try the next candidate */
           }
         }
       }
-      return {status: 404, body: '', file: null};
+      return {status: 404, body: '', file: null, location: '', redirectStatus: 0};
     },
     async listHtmlFiles() {
       const files = [];
@@ -409,13 +413,32 @@ export function createHttpSource(baseUrl) {
     kind: 'http',
     label: root,
     async get(route) {
-      const response = await fetch(`${root}${route}`, {redirect: 'manual'});
-      const body = response.status === 200 ? await response.text() : '';
+      const first = await fetch(`${root}${route}`, {redirect: 'manual'});
+      const location = first.headers.get('location') ?? '';
+
+      // GitHub Pages answers the extensionless form of a route with a redirect
+      // to the trailing-slash form, and `docusaurus serve` does the same.
+      // Follow those hops the way a browser does, so the checks assert the
+      // page itself rather than the normalisation step in front of it.
+      let response = first;
+      let hops = 0;
+      while (
+        hops < 3 &&
+        response.status >= 300 &&
+        response.status < 400 &&
+        response.headers.get('location')
+      ) {
+        const next = new URL(response.headers.get('location'), `${root}${route}`).toString();
+        response = await fetch(next, {redirect: 'manual'});
+        hops += 1;
+      }
+
       return {
         status: response.status,
-        body,
+        body: response.status === 200 ? await response.text() : '',
         file: null,
-        location: response.headers.get('location') ?? '',
+        location,
+        redirectStatus: first.status,
       };
     },
   };
@@ -459,13 +482,14 @@ export async function checkLegacyAliases({source, legacy, origin, basePath}) {
     const expected = normalizeRoute(target, {origin, basePath});
     if (response.location) {
       const redirect = normalizeRoute(response.location, {origin, basePath});
-      if ([301, 302, 303, 307, 308].includes(response.status) && redirect === expected) {
+      const isRedirect = [301, 302, 303, 307, 308].includes(response.redirectStatus);
+      if (isRedirect && redirect === expected) {
         check.counts.redirected = (check.counts.redirected ?? 0) + 1;
         check.counts.ok += 1;
         continue;
       }
       const cleanUrl = normalizeRoute(legacyPath.replace(/\.html$/i, ''), {origin, basePath});
-      if ([301, 302, 303, 307, 308].includes(response.status) && redirect === cleanUrl) {
+      if (isRedirect && redirect === cleanUrl) {
         // `docusaurus serve` strips `.html` from every URL before serving; a
         // static host serves the alias file itself. The alias file is verified
         // by the directory mode of this check.
@@ -476,7 +500,7 @@ export async function checkLegacyAliases({source, legacy, origin, basePath}) {
       }
       recordFailure(
         check,
-        `${legacyPath} -> HTTP ${response.status} ${redirect}, expected 200 or a redirect to ${expected}`,
+        `${legacyPath} -> HTTP ${response.redirectStatus} ${redirect}, expected 200 or a redirect to ${expected}`,
       );
       continue;
     }
@@ -994,7 +1018,7 @@ export function createKeyPages(basePath = '/') {
       ],
     },
     {
-      route: '/tools/bmi-calculator',
+      route: '/tools/bmi-calculator/',
       label: 'BMI calculator',
       assertions: [
         {test: (html) => countMatches(html, /<input\b/gi) >= 2, message: 'has fewer than 2 inputs'},
@@ -1002,7 +1026,7 @@ export function createKeyPages(basePath = '/') {
       ],
     },
     {
-      route: '/blog/basketball/10-essential-basketball-drills',
+      route: '/blog/basketball/10-essential-basketball-drills/',
       label: 'article',
       assertions: [
         {
@@ -1012,7 +1036,7 @@ export function createKeyPages(basePath = '/') {
       ],
     },
     {
-      route: '/blog',
+      route: '/blog/',
       label: 'blog index',
       assertions: [
         {

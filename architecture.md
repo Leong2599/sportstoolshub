@@ -95,14 +95,20 @@ and **presentational components** (`src/components/calculators/*`) built on a sh
 
 ### URL & routing strategy
 - Canonical URLs are Docusaurus clean routes: `/tools/<slug>/`, `/blog/<sport>/<slug>/`, `/about/`, `/`.
-- `trailingSlash` stays unset (default), so GitHub Pages resolves both `/tools/x` and `/tools/x/` to the same
-  `index.html`. Do **not** set it to `false` — see the note already proven in `pruneseo`'s config.
-- A generated `legacy-urls.json` (old path → new route) is the contract. It is derived from the source
+- `trailingSlash: true`, so the canonical form is the one GitHub Pages serves from `<route>/index.html`.
+  GitHub Pages resolves an extensionless path to `<path>.html` when that file exists and only falls back to
+  `<path>/index.html` otherwise, so `/tools/x` is the legacy alias file and `/tools/x/` is the page. The
+  alias layer writes those `<route>.html` files, which makes the trailing-slash form the only one that can
+  serve the page itself. (Before this was settled, the alias pointed at the extensionless form of its own
+  route: every tool and blog URL refreshed into itself, forever.)
+- A generated `legacy-urls.json` (old path → canonical URL) is the contract. It is derived from the source
   `sitemap.xml` plus the page inventory, with two known-bad entries corrected. **The build fails if any legacy
   URL has no target.**
 - A `postBuild` plugin reads that map and writes alias HTML at each legacy `.html` path: instant
   `<meta http-equiv="refresh">`, `<link rel="canonical">` to the new route, and the new `<title>`. No `noindex` —
   canonical is the consolidation signal, and meta-refresh is treated as a redirect.
+- The plugin models the host's resolution rules and refuses to write an alias that points at itself or
+  shadows the route it redirects to; those are reported as `broken` and fail the strict build.
 - Home and blog index need no alias for `/index.html` (the built home *is* `build/index.html`); `/blog/blog.html`
   and `/about.html` do get aliases.
 - Trade-off accepted: aliases return 200, not 301. This is softer than a hosting-level redirect. If search
@@ -217,6 +223,12 @@ What has to exist that does not yet:
   `/tools/x.html`, `/tools/x`, `/tools/x/`, `/blog/sport/x.html`.
 - *Decision rule:* ship the alias layer if all four resolve with correct content and a consistent canonical;
   otherwise invert (make the `.html` copy canonical) or move to a redirect-capable host.
+- *Outcome:* the alias layer shipped, but the spike's question was answered the other way round after the
+  production cutover. GitHub Pages resolves `/tools/x` to `tools/x.html` — the alias file — before it tries
+  `tools/x/index.html`, so the alias shadowed the route it pointed at and every extensionless URL refreshed
+  into itself. The fix was to make the trailing-slash form canonical (`trailingSlash: true`), so the alias
+  points at a page the host serves directly, and to teach the parity check the host's real resolution order
+  so it fails if an alias shadows a route again.
 
 **2. Calculator parity harness**
 - *Question:* can the formulas be ported with bit-for-bit output parity?

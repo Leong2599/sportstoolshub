@@ -1,5 +1,6 @@
-import {existsSync} from 'node:fs';
+import {existsSync, readdirSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
+import {join} from 'node:path';
 import {describe, expect, it} from 'vitest';
 import {
   normalizeSearchText,
@@ -13,19 +14,33 @@ import {tools} from './tools';
 const toolsDir = fileURLToPath(new URL('../pages/tools/', import.meta.url));
 const blogDir = fileURLToPath(new URL('../../blog/', import.meta.url));
 
+function countBlogPosts(): number {
+  let total = 0;
+  for (const sport of readdirSync(blogDir, {withFileTypes: true})) {
+    if (!sport.isDirectory()) {
+      continue;
+    }
+    total += readdirSync(join(blogDir, sport.name)).filter((file) =>
+      file.endsWith('.mdx'),
+    ).length;
+  }
+  return total;
+}
+
 describe('search index', () => {
   it('covers every tool and every blog post exactly once', () => {
     const toolEntries = searchEntries.filter((entry) => entry.type === 'tool');
     const articleEntries = searchEntries.filter(
       (entry) => entry.type === 'article',
     );
+    const articles = countBlogPosts();
 
     expect(toolEntries).toHaveLength(41);
-    expect(articleEntries).toHaveLength(214);
-    expect(searchEntries).toHaveLength(255);
+    expect(articleEntries).toHaveLength(articles);
+    expect(searchEntries).toHaveLength(41 + articles);
 
     expect(new Set(toolEntries.map((entry) => entry.url)).size).toBe(41);
-    expect(new Set(articleEntries.map((entry) => entry.url)).size).toBe(214);
+    expect(new Set(articleEntries.map((entry) => entry.url)).size).toBe(articles);
   });
 
   it('carries the catalog title, description and category for every tool', () => {

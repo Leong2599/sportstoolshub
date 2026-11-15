@@ -79,21 +79,24 @@ function readInventoryPaths() {
   return paths;
 }
 
+// Targets are canonical URLs, so they carry a trailing slash: that is the form
+// GitHub Pages serves from `<route>/index.html`. The extensionless form belongs
+// to the alias file (`<route>.html`), which redirects here.
 function toTarget(legacyPath) {
   if (legacyPath === '/') {
     return '/';
   }
   if (legacyPath === '/about.html' || legacyPath === '/tools/about.html') {
-    return '/about';
+    return '/about/';
   }
   if (legacyPath === '/blog/blog.html') {
-    return '/blog';
+    return '/blog/';
   }
   if (/^\/tools\/[a-z0-9-]+\.html$/.test(legacyPath)) {
-    return legacyPath.replace(/\.html$/, '');
+    return `${legacyPath.replace(/\.html$/, '')}/`;
   }
   if (/^\/blog\/[a-z0-9-]+\/[a-z0-9-]+\.html$/.test(legacyPath)) {
-    return legacyPath.replace(/\.html$/, '');
+    return `${legacyPath.replace(/\.html$/, '')}/`;
   }
   throw new Error(`Unsupported legacy path shape: ${legacyPath}`);
 }

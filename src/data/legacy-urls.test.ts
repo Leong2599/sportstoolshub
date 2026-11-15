@@ -16,9 +16,9 @@ describe('legacy URL contract', () => {
   });
 
   it('maps both about spellings and the blog index', () => {
-    expect(legacyUrls['/about.html']).toBe('/about');
-    expect(legacyUrls['/tools/about.html']).toBe('/about');
-    expect(legacyUrls['/blog/blog.html']).toBe('/blog');
+    expect(legacyUrls['/about.html']).toBe('/about/');
+    expect(legacyUrls['/tools/about.html']).toBe('/about/');
+    expect(legacyUrls['/blog/blog.html']).toBe('/blog/');
   });
 
   it('maps every tool page to a clean tools route', () => {
@@ -28,7 +28,7 @@ describe('legacy URL contract', () => {
     );
     expect(tools).toHaveLength(41);
     for (const [legacyPath, target] of tools) {
-      expect(target).toBe(legacyPath.replace(/\.html$/, ''));
+      expect(target).toBe(`${legacyPath.replace(/\.html$/, '')}/`);
     }
   });
 
@@ -40,7 +40,7 @@ describe('legacy URL contract', () => {
     const sports = new Set(posts.map(([legacyPath]) => legacyPath.split('/')[2]));
     expect(sports.size).toBe(14);
     for (const [legacyPath, target] of posts) {
-      expect(target).toBe(legacyPath.replace(/\.html$/, ''));
+      expect(target).toBe(`${legacyPath.replace(/\.html$/, '')}/`);
     }
   });
 
@@ -63,7 +63,18 @@ describe('legacy URL contract', () => {
       expect(target).not.toContain('//');
       expect(target).not.toContain('?');
       expect(target).not.toContain('#');
-      expect(target).toMatch(/^(?:\/|\/about|\/blog|\/tools\/[a-z0-9-]+|\/blog\/[a-z0-9-]+\/[a-z0-9-]+)$/);
+      expect(target).toMatch(
+        /^(?:\/|\/about\/|\/blog\/|\/tools\/[a-z0-9-]+\/|\/blog\/[a-z0-9-]+\/[a-z0-9-]+\/)$/,
+      );
+    }
+  });
+
+  it('points every target at the trailing-slash form GitHub Pages serves', () => {
+    // GitHub Pages serves `/tools/x/` from `tools/x/index.html` and the
+    // extensionless `/tools/x` from `tools/x.html` - the legacy alias file.
+    // The canonical target therefore has to carry the trailing slash.
+    for (const target of targets) {
+      expect(target === '/' || target.endsWith('/')).toBe(true);
     }
   });
 

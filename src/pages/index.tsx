@@ -1,7 +1,7 @@
 import {useMemo, type ReactNode} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import {HomeHero, ToolGrid} from '../components/home';
+import {FeaturedBadges, HomeHero, ToolGrid} from '../components/home';
 import {buildCategories} from '../data/chrome';
 import styles from './index.module.css';
 
@@ -19,6 +19,7 @@ export default function Home(): ReactNode {
         <HomeHero />
         <ToolGrid sections={sections} />
       </main>
+      <FeaturedBadges />
     </Layout>
   );
 }

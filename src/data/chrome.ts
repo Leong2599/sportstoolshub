@@ -135,6 +135,88 @@ export const FOOTER_BRAND_COLUMN = {
   ],
 };
 
+export type FeaturedBadge = {
+  href: string;
+  label: string;
+  image?: {
+    src: string;
+    width?: number;
+    height?: number;
+  };
+};
+
+/**
+ * Directory badges listed under the source page's footer, in source order.
+ * `label` doubles as the image alt text (or the visible text for text-only
+ * badges), so every badge has an accessible name.
+ */
+export const FEATURED_BADGES: readonly FeaturedBadge[] = [
+  {
+    href: 'https://findly.tools/sports-tools-hub?utm_source=sports-tools-hub',
+    label: 'Featured on findly.tools',
+    image: {src: 'https://findly.tools/badges/findly-tools-badge-light.svg', width: 150},
+  },
+  {
+    href: 'https://dofollow.tools',
+    label: 'Featured on Dofollow.Tools',
+    image: {src: 'https://dofollow.tools/badge/badge_light.svg', width: 200, height: 54},
+  },
+  {
+    href: 'https://twelve.tools',
+    label: 'Featured on Twelve Tools',
+    image: {src: 'https://twelve.tools/badge0-light.svg', width: 200, height: 54},
+  },
+  {
+    href: 'https://www.siteswebdirectory.com/Health_Medical/Dentistry/',
+    label: 'Dentists Marketing',
+  },
+  {
+    href: 'https://startupbenchmarks.com',
+    label: 'Startup Benchmarks',
+    image: {src: 'https://startupbenchmarks.com/assets/images/badge.png', height: 54},
+  },
+  {
+    href: 'https://mylaunchstash.com',
+    label: 'My Launch Stash',
+    image: {src: 'https://mylaunchstash.com/assets/images/badge.png', height: 54},
+  },
+  {
+    href: 'https://www.justsimple.tools',
+    label: 'Listed on JustSimple Tools',
+    image: {src: 'https://www.justsimple.tools/badge.svg', width: 150},
+  },
+  {
+    href: 'https://acidtools.com',
+    label: 'Acid Tools',
+    image: {src: 'https://acidtools.com/assets/images/badge.png', height: 54},
+  },
+  {
+    href: 'https://firstlook.tools',
+    label: 'Featured on First Look',
+    image: {src: 'https://firstlook.tools/badge/badge_light.svg', width: 200},
+  },
+  {
+    href: 'https://ufind.best/products/tytyai?utm_source=ufind.best',
+    label: 'Featured on ufind.best',
+    image: {src: 'https://ufind.best/badges/ufind-best-badge-light.svg', width: 150},
+  },
+  {
+    href: 'https://www.showmysites.com',
+    label: 'ShowMySites Badge',
+    image: {src: 'https://www.showmysites.com/static/backlink/gray_border.webp', width: 200},
+  },
+  // {
+  //   href: 'https://www.seewhatnewai.com',
+  //   label: '[SeeWhatNewAI]',
+  //   image: {src: '', width: 200},
+  // },
+  {
+    href: 'https://uno.directory',
+    label: 'Listed on Uno Directory',
+    image: {src: 'https://uno.directory/uno-directory.svg', width: 120},
+  },
+];
+
 /**
  * Footer bottom line. The sitemap is a generated file rather than a route, so
  * it stays a plain anchor instead of a Docusaurus link.

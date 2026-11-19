@@ -5,6 +5,7 @@ import {
   buildFooterCopyright,
   buildNavbarItems,
   CATEGORY_ANCHORS,
+  FEATURED_BADGES,
   FOOTER_BRAND_COLUMN,
   SITE_BRAND,
   TOOLS_ANCHOR,
@@ -174,6 +175,21 @@ describe('site chrome derived from the tool catalog', () => {
     expect(Object.keys(CATEGORY_ANCHORS)).toEqual([...TOOL_CATEGORIES]);
     for (const category of TOOL_CATEGORIES) {
       expect(CATEGORY_ANCHORS[category]).toMatch(/^[a-z0-9-]+$/);
+    }
+  });
+});
+
+describe('featured badges', () => {
+  it('lists every legacy badge with a unique target and an accessible name', () => {
+    expect(FEATURED_BADGES).toHaveLength(14);
+    expect(new Set(FEATURED_BADGES.map((badge) => badge.href)).size).toBe(14);
+
+    for (const badge of FEATURED_BADGES) {
+      expect(badge.label).not.toBe('');
+      expect(badge.href).toMatch(/^https:\/\//);
+      if (badge.image) {
+        expect(badge.image.src).toMatch(/^https:\/\//);
+      }
     }
   });
 });
